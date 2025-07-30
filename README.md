@@ -56,42 +56,18 @@ You can use Amazon Q Developer CLI to generate new scripts based on:
 1. **Existing scripts**: Use an existing script as a template
 2. **Documentation topics**: Generate a script from AWS documentation
 
-### Using existing scripts as templates
+To adapt an existing script for your requirements, use a prompt such as the following.
 
 ```bash
-# Example: Generate a script for IPAM setup using an existing script
 q "Generate a script to set up IPAM for my VPC. Use the following script as an example: 009-vpc-ipam-gs.sh"
 ```
 
-### Generating from documentation
-
-```bash
-# Example: Generate a script from AWS Payment Cryptography documentation
-q "read the instructions in the ../../instra/tutorial-gen folder and follow them in order, using this topic: https://docs.aws.amazon.com/payment-cryptography/latest/userguide/getting-started.html when instructed to run the script in step 2b, it's ok to actually run the script and create resources. this is part of the process. when you generate the script, be careful to check required options and option names for each command."
-```
-
-## Prerequisites
-
-- AWS CLI installed and configured with appropriate credentials
-- Bash shell environment
-- Appropriate AWS permissions for the services used in each script
+To generate a script and tutorial based on AWS Documentation content, see [instra/README.md](instra/README.md)
 
 ## Contributing
 
+See [CONTRIBUTING](CONTRIBUTING)
 We welcome contributions to expand the collection of tutorials and scripts. To contribute:
-
-1. **Create a new folder** in the `/tuts` directory following the naming convention: `XXX-service-usecase`
-2. **Follow the tutorial generation instructions** in the `/instra/tutorial-gen` folder
-3. **Submit only the final tutorial and script files** after testing and validation
-
-### Folder structure for new contributions
-
-```
-/tuts/XXX-service-usecase/
-├── XXX-service-usecase-script.sh    # The executable script
-├── XXX-service-usecase-tutorial.md      # The tutorial documentation
-└── XXX-service-usecase-README.md          # Brief description of the use case
-```
 
 ## Cleanup
 

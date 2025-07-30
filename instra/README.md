@@ -1,63 +1,51 @@
-# AWS Developer Tutorials - Instructions
+# Instructions
 
-This directory contains instructions and resources for generating new AWS CLI tutorials and scripts.
+You can use the instructions in this folder to generate new scripts and tutorials for the AWS CLI based on existing content. The instructions use existing AWS Documentation and CLI examples to generate working scripts for the AWS CLI, even if there isn't a specific example for your use case.
 
-## Overview
+Choose a use case or scenario for one or more services. Find an existing documentation topic for the use case. The content doesn't need to reference the AWS CLI directly, but it helps if you have CLI examples in the AWS CLI GitHub repository.
 
-The instructions in this directory guide you through the process of creating high-quality AWS CLI tutorials and scripts using Amazon Q Developer CLI. These instructions are designed to help you:
+## Prerequisites
 
-1. Collect information about AWS services and use cases
-2. Generate working AWS CLI scripts
-3. Create comprehensive tutorials that explain the scripts
-4. Validate and improve both scripts and tutorials
+To generate tutorials, you need the following tools.
 
-## Directory Structure
+- The [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html)
+- The [Q CLI](https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/command-line.html)
+- The [AWS Docs MCP server](https://awslabs.github.io/mcp/servers/aws-documentation-mcp-server/)
+- The [AWS CLI GitHub repository](https://github.com/aws/aws-cli/tree/develop/awscli)
 
-- `/tutorial-gen`: Step-by-step instructions for generating tutorials and scripts
+The AWS CLI repo has examples for AWS CLI commands. The instructions direct Q to find these in the repo in your user directory. If you clone the repo somewhere else, indicate this in the prompt.
 
-## Tutorial Generation Process
+## Create a folder
 
-The tutorial generation process is divided into several steps, each with its own instruction file in the `/tutorial-gen` directory:
+Create a new folder in the [tuts](../tuts) directory for your use case, following the naming convention.
 
-1. **Information Collection**
-   - Collect documentation topics
-   - Gather example CLI commands
+   ```
+   001-lightsail-gs
+   002-vpc-gs
+   ```
 
-2. **Script Creation**
-   - Generate an initial script
-   - Test and run the script
-   - Validate script functionality
-   - Simplify and improve the script
+Use the next available number after the highest number in use. Indicate the service name or names and the use case in the folder name. You can use `gs` for getting started use cases.
 
-3. **Tutorial Creation**
-   - Draft a tutorial based on the script
-   - Validate tutorial content
+## Prompt
 
-4. **Finalization**
-   - Address feedback
-   - Make final improvements
+Open Q chat in the new folder. Pass the URL to an existing topic with some additional instructions
 
-## Using These Instructions
+> read the instructions in the ../../instra/tutorial-gen folder and follow them in order, using this topic: https://docs.aws.amazon.com/payment-cryptography/latest/userguide/getting-started.html when instructed to run the script in step 2b, it's ok to actually run the script and create resources. this is part of the process. when you generate the script, be careful to check required options and option names for each command."
 
-To generate a new tutorial:
+Q tends to not run the script unless you specify this in the prompt. Q processes the instructions in order to generate a script, test it, simplify it, and generate and revise a tutorial. The process can take 20-40 minutes depending on the available documentation and examples. 
 
-1. Start with the file `0-general-instructions.md` in the `/tutorial-gen` directory
-2. Follow the numbered instruction files in sequence
-3. Use Amazon Q Developer CLI to assist with each step
-4. Place the final tutorial and script in a new folder in the `/tuts` directory
+## Pull requests
 
-## Example Usage with Amazon Q Developer CLI
+The tool generates a lot of artifacts including intermediate script revisions that generate errors. Submit a pull request with only the final revision of the script and tutorial. Rename these after the use case follow this convention.
+torial. Rename these after the use case follow this convention.
 
-```bash
-q "read the instructions in the ../../instra/tutorial-gen folder and follow them in order, using this topic: https://docs.aws.amazon.com/payment-cryptography/latest/userguide/getting-started.html when instructed to run the script in step 2b, it's ok to actually run the script and create resources. this is part of the process. when you generate the script, be careful to check required options and option names for each command."
+```
+├── 001-lightsail-gs
+│   ├── README.md
+│   ├── lightsail-gs.md
+│   └── lightsail-gs.sh
 ```
 
-This command instructs Amazon Q Developer CLI to:
-1. Read the tutorial generation instructions
-2. Follow them in order
-3. Use the AWS Payment Cryptography getting started guide as the source material
-4. Generate and test a script for this service
+## Testing
 
-## Contributing
-
-If you have suggestions for improving the tutorial generation process, please submit them as pull requests or issues in the repository.
+All new scripts and tutorials need to be tested by the author. Attach a log from a successful test run to the pull request.

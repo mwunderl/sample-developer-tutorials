@@ -35,4 +35,4 @@ To use a tutorial:
 
 ## Contributing
 
-To contribute a new tutorial, please follow the instructions in the `/instra/tutorial-gen` folder.
+To create a new tutorial, [instra/README.md](../instra/README.md).

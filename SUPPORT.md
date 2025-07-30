@@ -8,7 +8,7 @@ Refer to the documentation in the [README.md](README.md) file for basic usage in
 
 ## Issues
 
-If you encounter a bug or have a feature request, please submit an issue through our [GitHub issue tracker](https://github.com/aws/developer-tutorials/issues).
+If you encounter a bug or have a feature request, please submit an issue through our [GitHub issue tracker](https://github.com/aws-samples/sample-developer-tutorials/issues).
 
 When filing an issue, please include:
 - A clear description of the problem
@@ -21,7 +21,7 @@ When filing an issue, please include:
 ## Community Support
 
 For general questions and discussions:
-- Join our [GitHub Discussions](https://github.com/aws/developer-tutorials/discussions)
+- Join our [GitHub Discussions](https://github.com/aws-samples/sample-developer-tutorials/discussions)
 - Ask questions on [Stack Overflow](https://stackoverflow.com/) using the tag `developer-tutorials`
 
 ## Contact
