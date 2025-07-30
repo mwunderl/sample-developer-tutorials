@@ -1,59 +1,70 @@
-# Contributing Guidelines
+# Contributing to Developer Tutorials
 
-Thank you for your interest in contributing to our project. Whether it's a bug report, new feature, correction, or additional
-documentation, we greatly value feedback and contributions from our community.
+Thank you for your interest in contributing to Developer Tutorials! We greatly value feedback and contributions from our community.
 
-Please read through this document before submitting any issues or pull requests to ensure we have all the necessary
-information to effectively respond to your bug report or contribution.
+## Reporting Issues
 
+If you find a bug or have a suggestion for improving the Developer Tutorials, please open an issue in our GitHub repository. When filing an issue, please include:
 
-## Reporting Bugs/Feature Requests
+- A clear description of the issue or suggestion
+- Steps to reproduce the issue
+- Expected behavior
+- Actual behavior
+- Any relevant logs or error messages
+- Your environment (OS, Python version, etc.)
 
-We welcome you to use the GitHub issue tracker to report bugs or suggest features.
+## Contributing Code
 
-When filing an issue, please check existing open, or recently closed, issues to make sure somebody else hasn't already
-reported the issue. Please try to include as much information as you can. Details like these are incredibly useful:
+We welcome code contributions through pull requests. Here's how to get started:
 
-* A reproducible test case or series of steps
-* The version of our code being used
-* Any modifications you've made relevant to the bug
-* Anything unusual about your environment or deployment
+1. Fork the repository
+2. Create a new branch for your feature or bug fix
+3. Make your changes
+4. Add or update tests as necessary
+5. Run the test suite to ensure all tests pass
+6. Commit your changes with clear, descriptive commit messages
+7. Push your branch to your fork
+8. Open a pull request against the main repository
 
+## Development Setup
 
-## Contributing via Pull Requests
-Contributions via pull requests are much appreciated. Before sending us a pull request, please ensure that:
+To set up your development environment:
 
-1. You are working against the latest source on the *main* branch.
-2. You check existing open, and recently merged, pull requests to make sure someone else hasn't addressed the problem already.
-3. You open an issue to discuss any significant work - we would hate for your time to be wasted.
+```bash
+# Clone the repository
+git clone https://github.com/aws-samples/sample-developer-tutorials.git
 
-To send us a pull request, please:
+# Navigate to the project directory
+cd sample-developer-tutorials
+```
 
-1. Fork the repository.
-2. Modify the source; please focus on the specific change you are contributing. If you also reformat all the code, it will be hard for us to focus on your change.
-3. Ensure local tests pass.
-4. Commit to your fork using clear commit messages.
-5. Send us a pull request, answering any default questions in the pull request interface.
-6. Pay attention to any automated CI failures reported in the pull request, and stay involved in the conversation.
+## Generating tutorials
 
-GitHub provides additional document on [forking a repository](https://help.github.com/articles/fork-a-repo/) and
-[creating a pull request](https://help.github.com/articles/creating-a-pull-request/).
+Follow the instructions in [instra/README.md](instra/README.md)
 
+## Testing
 
-## Finding contributions to work on
-Looking at the existing issues is a great way to find something to contribute on. As our projects, by default, use the default GitHub issue labels (enhancement/bug/duplicate/help wanted/invalid/question/wontfix), looking at any 'help wanted' issues is a great place to start.
+All new scripts and tutorials need to be tested by the author. Attach a log from a successful test run to the pull request.
 
+## Cleanup
+
+The tool generates a lot of artifacts including intermediate script revisions that generate errors. Submit a pull request with only the final revision of the script and tutorial. Rename these after the use case follow this convention.
+
+```
+├── 001-lightsail-gs
+│   ├── README.md
+│   ├── lightsail-gs.md
+│   └── lightsail-gs.sh
+```
+
+## Documentation
+
+Add a readme for your contribution that describes its use case.
 
 ## Code of Conduct
-This project has adopted the [Amazon Open Source Code of Conduct](https://aws.github.io/code-of-conduct).
-For more information see the [Code of Conduct FAQ](https://aws.github.io/code-of-conduct-faq) or contact
-opensource-codeofconduct@amazon.com with any additional questions or comments.
 
+This project adheres to the [Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code.
 
-## Security issue notifications
-If you discover a potential security issue in this project we ask that you notify AWS/Amazon Security via our [vulnerability reporting page](http://aws.amazon.com/security/vulnerability-reporting/). Please do **not** create a public github issue.
+## License
 
-
-## Licensing
-
-See the [LICENSE](LICENSE) file for our project's licensing. We will ask you to confirm the licensing of your contribution.
+By contributing to Developer Tutorials, you agree that your contributions will be licensed under the project's [Apache License 2.0](LICENSE).
