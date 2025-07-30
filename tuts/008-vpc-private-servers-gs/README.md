@@ -1,4 +1,4 @@
-# Vpc Private Servers Gs
+# Amazon VPC private servers getting started
 
 This tutorial demonstrates how to configure private servers in Amazon VPC using the AWS CLI. You'll learn to set up isolated network environments, configure private subnets, implement bastion hosts, and secure server access patterns.
 

@@ -1,4 +1,4 @@
-# Chimesdk Routingcalls
+# Amazon Chime SDK routing calls
 
 This tutorial demonstrates how to set up call routing with Amazon Chime SDK using the AWS CLI. You'll learn to configure voice connectors, set up routing rules, manage phone numbers, and implement telephony solutions for communication applications.
 

@@ -1,4 +1,4 @@
-# Cloudfront Gettingstarted
+# Amazon CloudFront getting started
 
 This tutorial demonstrates how to set up and configure Amazon CloudFront distributions using the AWS CLI. You'll learn to create distributions, configure origins, set up caching behaviors, and implement content delivery optimization for global web applications.
 

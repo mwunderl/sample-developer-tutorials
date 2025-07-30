@@ -1,4 +1,4 @@
-# Cloudmap Service Discovery
+# AWS Cloud Map service discovery
 
 This tutorial demonstrates how to implement service discovery with AWS Cloud Map using the AWS CLI. You'll learn to create namespaces, register services, configure health checks, and discover services dynamically for microservices architectures.
 

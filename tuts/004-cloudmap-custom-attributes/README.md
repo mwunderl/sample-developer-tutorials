@@ -1,4 +1,4 @@
-# Cloudmap Custom Attributes
+# AWS Cloud Map custom attributes
 
 This tutorial demonstrates how to configure AWS Cloud Map with custom attributes using the AWS CLI. You'll learn to create service discovery namespaces, register services with custom metadata, and query services based on custom attributes for advanced service discovery scenarios.
 

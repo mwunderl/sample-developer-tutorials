@@ -1,4 +1,4 @@
-# AWS Batch with Fargate Getting Started
+# AWS Batch with Fargate getting started
 
 This tutorial demonstrates how to run batch jobs with AWS Batch and Fargate using the AWS CLI. You'll learn to create job definitions, configure compute environments, submit jobs, and monitor batch processing workloads in a serverless environment.
 

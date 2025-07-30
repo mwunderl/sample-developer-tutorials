@@ -1,4 +1,4 @@
-# Vpc Ipam Gs
+# Amazon VPC IPAM getting started
 
 This tutorial demonstrates how to set up IP Address Manager (IPAM) for Amazon VPC using the AWS CLI. You'll learn to create IPAM pools, manage IP address allocation, monitor IP usage, and implement centralized IP address management across multiple VPCs.
 

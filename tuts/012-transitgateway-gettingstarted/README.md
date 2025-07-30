@@ -1,4 +1,4 @@
-# Transitgateway Gettingstarted
+# AWS Transit Gateway getting started
 
 This tutorial demonstrates how to set up and configure AWS Transit Gateway using the AWS CLI. You'll learn to create transit gateways, attach VPCs, configure route tables, and implement scalable network connectivity between multiple VPCs and on-premises networks.
 
