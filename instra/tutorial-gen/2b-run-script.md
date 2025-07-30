@@ -1,0 +1,5 @@
+# run the script
+
+run the script created in the previous step, 2-cli-script.sh. if there are errors, determine the cause of the error and update the script. verify that all resources that were created are cleaned up. each time you run the script, record the name of the log, any errors that occurred, and the final status of each resource in a test run record. Continue running and updating the script until it runs end to end without error.
+
+When you update the script, add a version number to the name, instead of coming up with a new name. For example, if you update 2-cli-script.sh, save the initial version as 2-cli-script-v1.sh and create 2-cli-script-v2.sh with the changes. Increment the version number each time you iterate on the script. When you save a log or test report, include the version of the script in the name, such as 2-cli-script-v2-log.md or 2-cli-script-v2-report.mdd
