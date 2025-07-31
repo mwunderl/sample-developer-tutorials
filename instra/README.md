@@ -36,8 +36,7 @@ Q tends to not run the script unless you specify this in the prompt. Q processes
 
 ## Pull requests
 
-The tool generates a lot of artifacts including intermediate script revisions that generate errors. Submit a pull request with only the final revision of the script and tutorial. Rename these after the use case follow this convention.
-torial. Rename these after the use case follow this convention.
+The tool generates a lot of artifacts including intermediate script revisions that generate errors. Submit a pull request with only the final revision of the script and tutorial. Rename these after the use case. Follow this convention.
 
 ```
 ├── 001-lightsail-gs
