@@ -22,7 +22,9 @@ This tutorial creates resources that are mostly free of charge:
 
 The main costs would come from:
 - Phone numbers: $1.00 per phone number per month
-- Call processing: Inbound calls ($0.00422 per minute), outbound calls (varies by destination)
+- Call processing: Usage-based pricing that varies by call type and destination
+
+For detailed pricing information including PSTN rates and PSTN Audio Application usage rates, see the [Amazon Chime SDK Pricing page](https://aws.amazon.com/chime/chime-sdk/pricing/).
 
 The tutorial includes cleanup instructions to ensure you don't incur ongoing charges after completion.
 
