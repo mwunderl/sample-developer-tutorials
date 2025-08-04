@@ -1,14 +1,13 @@
-rds_CreateDBInstance:
+vpc_GettingStartedCLI:
   category:
   languages:
     Bash:
       versions:
         - sdk_version: 3
-          github: dotnetv3/RDS
-          sdkguide:
+          github: https://github.com/mccgeoff/sample-developer-tutorials/blob/main/tuts/002-vpc-gs/README.md
           excerpts:
             - description:
-              snippet_tags:
-                - RDS.dotnetv3.CreateDBInstance
+              snippet_files:
+                - tuts/002-vpc-gs/vpc-gs.sh
   services:
-    rds: {CreateDBInstance}
+    ec2: {CreateVpc}
