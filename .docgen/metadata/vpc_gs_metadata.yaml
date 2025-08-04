@@ -1,0 +1,14 @@
+rds_CreateDBInstance:
+  category:
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 3
+          github: dotnetv3/RDS
+          sdkguide:
+          excerpts:
+            - description:
+              snippet_tags:
+                - RDS.dotnetv3.CreateDBInstance
+  services:
+    rds: {CreateDBInstance}
