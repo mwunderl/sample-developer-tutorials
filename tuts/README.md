@@ -20,7 +20,9 @@ This directory contains a collection of AWS CLI tutorials and scripts for variou
 | 013 | Amazon EC2 | Basics | Basic operations for working with Amazon EC2 instances |
 | 015 | Amazon VPC | Peering | Set up VPC peering connections between VPCs |
 | 016 | Amazon OpenSearch Service | Getting Started | Get started with Amazon OpenSearch Service |
+| 018 | Amazon ECS | EC2 | Get started with Amazon ECS using EC2 instances |
 | 019 | AWS Lambda | Getting Started | Comprehensive introduction to AWS Lambda serverless functions |
+| 020 | Amazon EBS | Getting Started Volumes | Create and manage Amazon EBS volumes with EC2 instances |
 | 021 | AWS CloudFormation | Getting Started | Introduction to AWS CloudFormation infrastructure as code |
 | 022 | Amazon EBS | Intermediate | Intermediate Amazon EBS concepts and operations |
 | 024 | AWS Glue | Getting Started | Get started with AWS Glue using the AWS CLI |
@@ -51,6 +53,7 @@ This directory contains a collection of AWS CLI tutorials and scripts for variou
 | 054 | Amazon Kinesis Video Streams | Getting Started | Get started with Amazon Kinesis Video Streams |
 | 055 | Amazon VPC Lattice | Getting Started | Create and manage Amazon VPC Lattice service networks |
 | 057 | Amazon MSK | Getting Started | Introduction to Amazon Managed Streaming for Apache Kafka |
+| 058 | Elastic Load Balancing | Getting Started | Create and configure Application Load Balancers |
 | 059 | Amazon DataZone | Getting Started | Introduction to Amazon DataZone |
 | 061 | Amazon Athena | Getting Started | Get started with Amazon Athena |
 | 062 | AWS Support | Getting Started | Get started with AWS Support |
@@ -65,9 +68,13 @@ This directory contains a collection of AWS CLI tutorials and scripts for variou
 | 074 | Amazon Textract | Getting Started | Get started with Amazon Textract document analysis |
 | 075 | AWS Database Migration Service | Getting Started | Introduction to AWS Database Migration Service |
 | 077 | AWS Account Management | Getting Started | Get started with AWS Account Management |
+| 078 | Amazon ECR | Getting Started | Create and manage Docker container images with Amazon ECR |
 | 079 | AWS IoT Device Defender | Getting Started | Introduction to AWS IoT Device Defender |
+| 080 | AWS Step Functions | Getting Started | Create and run serverless workflows with AWS Step Functions |
 | 081 | AWS Elemental MediaConnect | Getting Started | Introduction to AWS Elemental MediaConnect |
 | 082 | Amazon Polly | Getting Started | Get started with Amazon Polly text-to-speech service |
+| 085 | Amazon ECS | Service Connect | Set up service-to-service communication in Amazon ECS |
+| 086 | Amazon ECS | Fargate Linux | Deploy containerized applications on Amazon ECS using Fargate |
 
 ## Using These Tutorials
 
@@ -89,13 +96,13 @@ To use a tutorial:
 The tutorials are organized by AWS service categories:
 
 **Compute & Containers**
-- EC2 (013), Lambda (019), Batch (011), EKS (034), Lightsail (001)
+- EC2 (013), Lambda (019), Batch (011), EKS (034), ECS (018, 085, 086), Lightsail (001)
 
 **Storage & Databases**
-- S3 (003), EBS (022), RDS (036), DynamoDB (070), DocumentDB (025), Neptune (064), ElastiCache (065), Redshift (038, 039)
+- S3 (003), EBS (020, 022), RDS (036), DynamoDB (070), DocumentDB (025), Neptune (064), ElastiCache (065), Redshift (038, 039)
 
 **Networking & Content Delivery**
-- VPC (002, 008, 009, 015), CloudFront (005), Transit Gateway (012), Direct Connect (051), VPC Lattice (055), Network Firewall (047)
+- VPC (002, 008, 009, 015), CloudFront (005), Transit Gateway (012), Direct Connect (051), VPC Lattice (055), Network Firewall (047), Elastic Load Balancing (058)
 
 **Analytics & Big Data**
 - EMR (037), Glue (024), Athena (061), Kinesis Video Streams (054), MSK (057), DataZone (059)
@@ -104,13 +111,13 @@ The tutorials are organized by AWS service categories:
 - SageMaker (028), Textract (074), Polly (082)
 
 **Security & Identity**
-- IAM Identity Center (045), Secrets Manager (073), Config (053), WAF (052), Payment Cryptography (067)
+- IAM Identity Center (045), Secrets Manager (073), Config (053), WAF (052), Payment Cryptography (067), Cognito (066)
 
 **Monitoring & Management**
 - CloudWatch (031, 032), Systems Manager (046), CloudFormation (021), Support (062), Account Management (077)
 
 **Application Integration**
-- SNS (048), SES (033), MQ (043), Cloud Map (004, 010)
+- SNS (048), SES (033), MQ (043), Cloud Map (004, 010), Step Functions (080)
 
 **IoT & Edge**
 - IoT Core (063), IoT Device Defender (079)
@@ -119,10 +126,10 @@ The tutorials are organized by AWS service categories:
 - Chime SDK (007), Connect (027), Elemental MediaConnect (081)
 
 **Developer Tools & Services**
-- Q Business (042), End User Messaging (049), Marketplace (030)
+- Q Business (042), End User Messaging (049), Marketplace (030), ECR (078)
 
 **Other Services**
-- WorkSpaces (035), Managed Grafana (044), Fault Injection Service (069), Database Migration Service (075)
+- WorkSpaces (035), Managed Grafana (044), Fault Injection Service (069), Database Migration Service (075), OpenSearch Service (016)
 
 ## Contributing
 
