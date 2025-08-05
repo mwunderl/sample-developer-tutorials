@@ -1,0 +1,26 @@
+vpc_GettingStartedCLI:
+  title: Get started using Amazon VPC using the AWS CLI
+  title_abbrev: Get started with Amazon VPC 
+  synopsis_list:
+    - Prerequisites & setup
+    - VPC creation & basic configuration
+    - Network configuration
+    - Security configuration
+    - Resource deployment
+    - Verification & testing
+    - Cleanup & resource management
+    - Production considerations
+    - Security considerations
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 3
+          github: https://github.com/aws-samples/sample-developer-tutorials/tuts/002-vpc-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/002-vpc-gs/vpc-gs.sh
+  services:
+    ec2: {
+      AllocateAddress, AssociateRouteTable, AttachInternetGateway, AuthorizeSecurityGroupIngress, CreateInternetGateway, CreateKeyPair, CreateNatGateway, CreateRoute, CreateRouteTable, CreateSecurityGroup, CreateSubnet, CreateVpc, DeleteInternetGateway, DeleteKeyPair, DeleteNatGateway, DeleteRouteTable, DeleteSecurityGroup, DeleteSubnet, DeleteVpc, DescribeAvailabilityZones, DescribeImages, DescribeInstances, DescribeInternetGateways, DescribeNatGateways, DescribeRouteTables, DescribeSecurityGroups, DescribeSubnets, DescribeVpcs, DetachInternetGateway, DisassociateRouteTable, ModifySubnetAttribute, ModifyVpcAttribute, ReleaseAddress, RunInstances, TerminateInstances}
