@@ -61,7 +61,7 @@ vpc_GettingStartedPrivate:
   - Set up the necessary components including VPC, subnets, route tables, and NAT gateways.
   - Configure security groups and IAM roles for proper access and security.
   - Use CLI commands to automate the creation and configuration of these resources.
-  category: 
+  category: Dev Tutorials
   languages:
     Bash:
       versions:
