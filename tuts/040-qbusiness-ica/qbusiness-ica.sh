@@ -169,11 +169,20 @@ cat > qbusiness-trust-policy.json << EOF
   "Version": "2012-10-17",
   "Statement": [
     {
+      "Sid": "AmazonQApplicationPermission",
       "Effect": "Allow",
       "Principal": {
         "Service": "qbusiness.amazonaws.com"
       },
-      "Action": "sts:AssumeRole"
+      "Action": "sts:AssumeRole",
+      "Condition": {
+        "StringEquals": {
+          "aws:SourceAccount": "$AWS_ACCOUNT_ID"
+        },
+        "ArnLike": {
+          "aws:SourceArn": "arn:aws:qbusiness:$AWS_REGION:$AWS_ACCOUNT_ID:application/*"
+        }
+      }
     }
   ]
 }
@@ -185,57 +194,47 @@ cat > qbusiness-permissions-policy.json << EOF
   "Version": "2012-10-17",
   "Statement": [
     {
+      "Sid": "AmazonQApplicationPutMetricDataPermission",
       "Effect": "Allow",
       "Action": [
-        "qbusiness:CreateApplication",
-        "qbusiness:GetApplication",
-        "qbusiness:DeleteApplication",
-        "qbusiness:CreateSubscription",
-        "qbusiness:ListSubscriptions",
-        "qbusiness:CreateWebExperience",
-        "qbusiness:GetWebExperience",
-        "qbusiness:ListWebExperiences",
-        "qbusiness:DeleteWebExperience"
+        "cloudwatch:PutMetricData"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "cloudwatch:namespace": "AWS/QBusiness"
+        }
+      }
+    },
+    {
+      "Sid": "AmazonQApplicationDescribeLogGroupsPermission",
+      "Effect": "Allow",
+      "Action": [
+        "logs:DescribeLogGroups"
       ],
       "Resource": "*"
     },
     {
+      "Sid": "AmazonQApplicationCreateLogGroupPermission",
       "Effect": "Allow",
       "Action": [
-        "sso:DescribeApplication",
-        "sso:DescribeInstance",
-        "sso:CreateApplication",
-        "sso:PutApplicationAssignmentConfiguration",
-        "sso:PutApplicationAuthenticationMethod",
-        "sso:PutApplicationGrant",
-        "sso:PutApplicationAccessScope"
+        "logs:CreateLogGroup"
       ],
       "Resource": [
-        "${IDENTITY_CENTER_ARN}",
-        "${IDENTITY_CENTER_ARN}/*"
+        "arn:aws:logs:$AWS_REGION:$AWS_ACCOUNT_ID:log-group:/aws/qbusiness/*"
       ]
     },
     {
+      "Sid": "AmazonQApplicationLogStreamPermission",
       "Effect": "Allow",
       "Action": [
-        "sso-admin:CreateApplicationAssignment",
-        "sso-admin:DeleteApplicationAssignment",
-        "sso-admin:ListApplicationAssignments"
+        "logs:DescribeLogStreams",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
       ],
       "Resource": [
-        "${IDENTITY_CENTER_ARN}",
-        "${IDENTITY_CENTER_ARN}/*"
+        "arn:aws:logs:$AWS_REGION:$AWS_ACCOUNT_ID:log-group:/aws/qbusiness/*:log-stream:*"
       ]
-    },
-    {
-      "Effect": "Allow",
-      "Action": [
-        "identitystore:DescribeUser",
-        "identitystore:DescribeGroup",
-        "identitystore:ListUsers",
-        "identitystore:ListGroups"
-      ],
-      "Resource": "*"
     }
   ]
 }
@@ -394,7 +393,22 @@ echo "User subscription created with ID: $USER_SUBSCRIPTION_ID" | tee -a "$LOG_F
 
 echo "" | tee -a "$LOG_FILE"
 echo "===========================================================" | tee -a "$LOG_FILE"
-echo "STEP 8: Verify Resources" | tee -a "$LOG_FILE"
+echo "STEP 8: Enable Creator Mode (LLM Direct Chat)" | tee -a "$LOG_FILE"
+echo "===========================================================" | tee -a "$LOG_FILE"
+
+echo "Enabling creator mode to allow direct chat with LLM" | tee -a "$LOG_FILE"
+CREATOR_MODE_RESULT=$(log_cmd "aws qbusiness update-chat-controls-configuration --region $AWS_REGION \
+  --application-id \"$APP_ID\" \
+  --creator-mode-configuration '{\"creatorModeControl\": \"ENABLED\"}' \
+  --query 'creatorModeConfiguration.creatorModeControl' --output text")
+check_error $?
+
+echo "Creator mode enabled: $CREATOR_MODE_RESULT" | tee -a "$LOG_FILE"
+CREATED_RESOURCES+=("Creator Mode Configuration: ENABLED")
+
+echo "" | tee -a "$LOG_FILE"
+echo "===========================================================" | tee -a "$LOG_FILE"
+echo "STEP 9: Verify Resources" | tee -a "$LOG_FILE"
 echo "===========================================================" | tee -a "$LOG_FILE"
 
 echo "Verifying application" | tee -a "$LOG_FILE"
