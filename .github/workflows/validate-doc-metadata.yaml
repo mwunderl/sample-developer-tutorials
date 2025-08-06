@@ -3,9 +3,9 @@ name: Validate Documentation Metadata
 on:  # yamllint disable-line rule:truthy
   workflow_dispatch:
   push:
-    branches: [main]
+    branches: [trib-setup]
   pull_request:
-    branches: [main]
+    branches: [trib-setup]
 
 jobs:
   validate-doc-metadata:
