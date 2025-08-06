@@ -16,7 +16,7 @@ vpc_GettingStartedCLI:
     Bash:
       versions:
         - sdk_version: 3
-          github: sample-developer-tutorials/tuts/002-vpc-gs
+          github: tuts/002-vpc-gs
           excerpts:
             - description:
               snippet_files:
