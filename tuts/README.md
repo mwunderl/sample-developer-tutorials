@@ -39,6 +39,7 @@ This directory contains a collection of AWS CLI tutorials and scripts for variou
 | [037](037-emr-gs/) | Amazon EMR | [Getting Started](037-emr-gs/) | Get started with Amazon EMR for big data processing |
 | [038](038-redshift-serverless/) | Amazon Redshift | [Serverless](038-redshift-serverless/) | Set up and use Amazon Redshift Serverless |
 | [039](039-redshift-provisioned/) | Amazon Redshift | [Provisioned](039-redshift-provisioned/) | Set up Amazon Redshift provisioned clusters |
+| [040](040-qbusiness-ica/) | Amazon Q Business | [Identity Center Authentication](040-qbusiness-ica/) | Set up Amazon Q Business with IAM Identity Center authentication |
 | [042](042-qbusiness-anon/) | Amazon Q Business | [Anonymous Access](042-qbusiness-anon/) | Configure anonymous access for Amazon Q Business |
 | [043](043-amazon-mq-gs/) | Amazon MQ | [Getting Started](043-amazon-mq-gs/) | Comprehensive introduction to Amazon MQ message brokers |
 | [044](044-amazon-managed-grafana-gs/) | Amazon Managed Grafana | [Getting Started](044-amazon-managed-grafana-gs/) | Introduction to Amazon Managed Grafana |
@@ -126,7 +127,7 @@ The tutorials are organized by AWS service categories:
 - Chime SDK (007), Connect (027), Elemental MediaConnect (081)
 
 **Developer Tools & Services**
-- Q Business (042), End User Messaging (049), Marketplace (030), ECR (078)
+- Q Business (040, 042), End User Messaging (049), Marketplace (030), ECR (078)
 
 **Other Services**
 - WorkSpaces (035), Managed Grafana (044), Fault Injection Service (069), Database Migration Service (075), OpenSearch Service (016)
