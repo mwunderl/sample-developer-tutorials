@@ -2,13 +2,13 @@ vpc_GettingStartedCLI:
   title: Get started using Amazon VPC using the CLI
   title_abbrev: Get started with Amazon VPC 
   synopsis_list:
-    - Prerequisites & setup
-    - VPC creation & basic configuration
+    - Prerequisites and setup
+    - VPC creation and basic configuration
     - Network configuration
     - Security configuration
     - Resource deployment
-    - Verification & testing
-    - Cleanup & resource management
+    - Verification and testing
+    - Cleanup and resource management
     - Production considerations
     - Security considerations
   category: Scenarios
