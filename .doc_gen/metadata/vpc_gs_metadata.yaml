@@ -16,6 +16,7 @@ vpc_GettingStartedCLI:
     Bash:
       versions:
         - sdk_version: 3
+          github_name: "Sample developer tutorials"
           github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/002-vpc-gs
           excerpts:
             - description:
@@ -44,6 +45,7 @@ vpc_GettingStartedIpam:
     Bash:
       versions:
         - sdk_version: 3
+          github_name: "Sample developer tutorials"
           github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/009-vpc-ipam-gs
           excerpts:
             - description:
