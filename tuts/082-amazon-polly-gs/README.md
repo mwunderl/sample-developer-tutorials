@@ -10,6 +10,13 @@ You can either run the automated shell script (`amazon-polly-getting-started.sh`
 - `amazon-polly-getting-started.md` - Step-by-step tutorial with detailed explanations
 - `README.md` - This file
 
+## Resources Created
+
+The script creates the following AWS resources in order:
+
+• Polly lexicon
+
+The script prompts you to clean up resources when you run it, including if there's an error part way through. If you need to clean up resources later, you can use the script log as a reference point for which resources were created.
 ## Prerequisites
 
 - AWS CLI installed and configured with appropriate credentials
