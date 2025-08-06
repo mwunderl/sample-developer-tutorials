@@ -16,7 +16,7 @@ vpc_GettingStartedCLI:
     Bash:
       versions:
         - sdk_version: 3
-          github: tuts/002-vpc-gs
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/002-vpc-gs
           excerpts:
             - description:
               snippet_files:
@@ -44,7 +44,7 @@ vpc_GettingStartedIpam:
     Bash:
       versions:
         - sdk_version: 3
-          github: tuts/009-vpc-ipam-gs
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/009-vpc-ipam-gs
           excerpts:
             - description:
               snippet_files:
@@ -66,7 +66,7 @@ vpc_GettingStartedPrivate:
     Bash:
       versions:
         - sdk_version: 3
-          github: tuts/008-vpc-private-servers-gs
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/008-vpc-private-servers-gs
           excerpts:
             - description:
               snippet_files:
