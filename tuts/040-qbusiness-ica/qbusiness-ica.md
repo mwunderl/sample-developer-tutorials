@@ -26,13 +26,13 @@ The total cost for running the resources in this tutorial for one hour is approx
 
 Amazon Q Business uses IAM Identity Center for user management. In this step, you'll check if you have an IAM Identity Center instance and create one if needed.
 
-First, check if you already have an IAM Identity Center instance:
+First, check if you already have an IAM Identity Center instance. Replace "us-east-1" with the AWS Region where your IAM Identity Center instance is located.
 
 ```bash
 aws sso-admin list-instances --region us-east-1 --query 'Instances[0].InstanceArn' --output text
 ```
 
-If the command returns "None" or an empty result, you need to create an IAM Identity Center instance:
+If the command returns "None" or an empty result, you need to create an IAM Identity Center instance. Replace "us-east-1" with the AWS Region where you want to create your IAM Identity Center instance.
 
 ```bash
 aws sso-admin create-instance --region us-east-1 --name "QBusinessIdentityCenter-abcd1234" --query 'InstanceArn' --output text
@@ -48,7 +48,7 @@ Amazon Q Business requires IAM roles and policies to function properly. In this 
 
 First, create a trust policy file that allows Amazon Q Business to assume the role:
 
-Note: For this tutorial, replace "123456789012" with your AWS account ID. Replace "us-east-1" with the AWS Region name of your Identity Center instance.
+Note: For this tutorial, replace "123456789012" with your AWS account ID. Replace "us-east-1" with the AWS Region name that you plan to use.
 
 ```bash
 cat > qbusiness-trust-policy.json << EOF
@@ -78,7 +78,7 @@ EOF
 
 Next, create a permissions policy file that defines what actions the role can perform. 
 
-Note: For this tutorial, replace "123456789012" with your AWS account number. 
+Note: For this tutorial, replace "123456789012" with your AWS account number. Replace "us-east-1" with the AWS Region name that you plan to use.
 
 ```bash
 cat > qbusiness-permissions-policy.json << EOF
@@ -133,7 +133,7 @@ cat > qbusiness-permissions-policy.json << EOF
 EOF
 ```
 
-Now, create the IAM role using the trust policy:
+Now, create the IAM role using the trust policy. Replace "us-east-1" with the AWS Region name that you plan to use.
 
 ```bash
 aws iam create-role \
@@ -144,7 +144,7 @@ aws iam create-role \
   --output text
 ```
 
-Create an IAM policy using the permissions policy file:
+Create an IAM policy using the permissions policy file. Replace "us-east-1" with the AWS Region name that you plan to use.
 
 ```bash
 aws iam create-policy \
@@ -155,7 +155,7 @@ aws iam create-policy \
   --output text
 ```
 
-Attach the policy to the role. Replace "123456789012" with your AWS account number.
+Attach the policy to the role. Replace "123456789012" with your AWS account number. Replace "us-east-1" with the AWS Region name that you plan to use.
 
 ```bash
 aws iam attach-role-policy \
@@ -172,7 +172,7 @@ Before creating the Amazon Q Business application, you need to set up a user in 
 
 First, get the Identity Store ID associated with your IAM Identity Center instance. 
 
-Replace "arn:aws:sso:::instance/ssoins-abcd1234xmpl" with the ARN of your IAM Identity Center instance.
+Replace "arn:aws:sso:::instance/ssoins-abcd1234xmpl" with the ARN of your IAM Identity Center instance. Replace "us-east-1" with the AWS Region where your IAM Identity Center instance is located. 
 
 ```bash
 aws sso-admin describe-instance \
@@ -184,7 +184,7 @@ aws sso-admin describe-instance \
 
 Make a note of the Identity Store ID in the response. You'll use it in the following command. 
 
-Now, create a user in the Identity Store. Replace "d-abcd1234xmpl" with your actual Identity Store ID. 
+Now, create a user in the Identity Store. Replace "d-abcd1234xmpl" with your actual Identity Store ID. Replace "us-east-1" with the AWS Region where your IAM Identity Center instance is located. 
 Note: In a production environment, use valid email addresses from your organization's domain instead of example.com.
 
 ```bash
@@ -207,7 +207,7 @@ This command creates a user in IAM Identity Center and returns the user ID. Save
 
 Now you're ready to create the Amazon Q Business application.
 
-Create the application using the following command. Replace "arn:aws:sso:::instance/ssoins-abcd1234xmpl" with your actual IAM Identity Center instance ARN. Replace "123456789012" with your AWS account number.
+Create the application using the following command. Replace "arn:aws:sso:::instance/ssoins-abcd1234xmpl" with your actual IAM Identity Center instance ARN. Replace "123456789012" with your AWS account number. Replace "us-east-1" with the AWS Region where your IAM Identity Center instance is located.
 
 ```bash
 aws qbusiness create-application \
@@ -225,7 +225,7 @@ This command creates an Amazon Q Business application and returns the applicatio
 
 After creating the application, wait for it to be fully provisioned (approximately 30 seconds).
 
-Next, get the application ARN from IAM Identity Center:
+Next, get the application ARN from IAM Identity Center. Replace "us-east-1" with the AWS Region where your IAM Identity Center instance is located.
 
 ```bash
 aws sso-admin list-applications \
@@ -239,7 +239,7 @@ If the command doesn't return an ARN immediately, wait a few seconds and try aga
 
 ## Step 5: Enable creator mode (LLM direct chat)
 
-To allow users to chat directly with the LLM without creating an index, you need to enable creator mode. Replace "app-abcd1234xmpl" with your actual application ID from Step 4.
+To allow users to chat directly with the LLM without creating an index, you need to enable creator mode. Replace "app-abcd1234xmpl" with your actual application ID from Step 4. Replace "us-east-1" with the AWS Region where your Amazon Q Business application is located.
 
 ```bash
 aws qbusiness update-chat-controls-configuration \
@@ -252,7 +252,7 @@ aws qbusiness update-chat-controls-configuration \
 
 ## Step 6: Assign the user to the application
 
-Now that you have both the user and the application created, you need to assign the user to the application. Replace "arn:aws:sso::123456789012:application/ssoins-abcd1234xmpl/apl-abcd1234xmpl" with your application ARN. Replace "1234abcd-xmpl-5678-efgh-90ijklmnopqr" with the user ID that's returned in Step 3.
+Now that you have both the user and the application created, you need to assign the user to the application. Replace "arn:aws:sso::123456789012:application/ssoins-abcd1234xmpl/apl-abcd1234xmpl" with your application ARN. Replace "1234abcd-xmpl-5678-efgh-90ijklmnopqr" with the user ID that's returned in Step 3. Replace "us-east-1" with the AWS Region where your IAM Identity Center instance is located.
 
 ```bash
 aws sso-admin create-application-assignment \
@@ -266,7 +266,7 @@ This command assigns the user to the Amazon Q Business application, allowing the
 
 ## Step 7: Create a user subscription
 
-After assigning the user to the application, you need to create a subscription that determines their access level. Replace "app-abcd1234xmpl" with the application ID that's returned in Step 4. Replace "1234abcd-xmpl-5678-efgh-90ijklmnopqr" with the user ID that's returned in Step 3.
+After assigning the user to the application, you need to create a subscription that determines their access level. Replace "app-abcd1234xmpl" with the application ID that's returned in Step 4. Replace "1234abcd-xmpl-5678-efgh-90ijklmnopqr" with the user ID that's returned in Step 3. Replace "us-east-1" with the AWS Region where your Amazon Q Business application is located.
 
 ```bash
 aws qbusiness create-subscription \
@@ -284,7 +284,7 @@ This command creates a full Q Business subscription for the user, giving them fu
 
 To provide a web interface for your Amazon Q Business application, you can create a web experience.
 
-First, create a trust policy file for the web experience role. Replace "123456789012" with your AWS account number. Replace "app-abcd1234xmpl" with the Q Business application ID that's returned from Step 4. 
+First, create a trust policy file for the web experience role. Replace "123456789012" with your AWS account number. Replace "app-abcd1234xmpl" with the Q Business application ID that's returned from Step 4. Replace "us-east-1" with the AWS Region of your Q Business application.
 
 ```bash
 cat > qbusiness-web-trust-policy.json << EOF
@@ -315,7 +315,7 @@ cat > qbusiness-web-trust-policy.json << EOF
 EOF
 ```
 
-Next, create a permissions policy file for the web experience. Replace "app-abcd1234xmpl" with your actual application ID that's returned in Step 4 and replace "123456789012" with your AWS account ID.
+Next, create a permissions policy file for the web experience. Replace "app-abcd1234xmpl" with your actual application ID that's returned in Step 4 and replace "123456789012" with your AWS account ID. Replace "us-east-1" with the AWS Region of your Q Business Application.
 
 ```bash
 cat > qbusiness-web-permissions-policy.json << EOF
@@ -486,7 +486,7 @@ cat > qbusiness-web-permissions-policy.json << EOF
 EOF
 ```
 
-Create the IAM role for the web experience:
+Create the IAM role for the web experience. Replace "us-east-1" with the AWS Region name that you plan to use.
 
 ```bash
 aws iam create-role \
@@ -497,7 +497,7 @@ aws iam create-role \
   --output text
 ```
 
-Create an IAM policy for the web experience:
+Create an IAM policy for the web experience. Replace "us-east-1" with the AWS Region name that you plan to use.
 
 ```bash
 aws iam create-policy \
@@ -508,7 +508,7 @@ aws iam create-policy \
   --output text
 ```
 
-Attach the policy to the role. Replace "123456789012" with the AWS account number. 
+Attach the policy to the role. Replace "123456789012" with the AWS account number. Replace "us-east-1" with the AWS Region name that you plan to use. 
 
 ```bash
 aws iam attach-role-policy \
@@ -519,7 +519,7 @@ aws iam attach-role-policy \
 
 After creating the role and policy, wait for them to propagate (approximately 15 seconds).
 
-Now, create the web experience. Replace "123456789012" with the AWS account number. Replace "app-abcd1234xmpl" with the name of your application ID that's returned from Step 4.
+Now, create the web experience. Replace "123456789012" with the AWS account number. Replace "app-abcd1234xmpl" with the name of your application ID that's returned from Step 4. Replace "us-east-1" with the AWS Region where your Amazon Q Business application is located.
 
 ```bash
 aws qbusiness create-web-experience \
@@ -532,7 +532,7 @@ aws qbusiness create-web-experience \
 
 This command creates a web experience for your Amazon Q Business application and returns the web experience ID. Save the web experience id for the following command to use.
 
-To get the URL for the web experience. Replace "app-abcd1234xmpl" with the name of your application ID that's returned from Step 4. Replace "wex-abcd1234xmpl" with your actual web experience id. 
+To get the URL for the web experience. Replace "app-abcd1234xmpl" with the name of your application ID that's returned from Step 4. Replace "wex-abcd1234xmpl" with your actual web experience id. Replace "us-east-1" with the AWS Region where your Amazon Q Business application is located.
 
 ```bash
 aws qbusiness get-web-experience \
@@ -551,19 +551,19 @@ To sign in and access the URL through a web browser, for username, use the user-
 
 To verify that your Amazon Q Business application has been created successfully, you can use the following commands. Replace "app-abcd1234xmpl" with your actual application ID that's returned in Step 4.
 
-Check the application details:
+Check the application details. Replace "us-east-1" with the AWS Region where your Amazon Q Business application is located.
 
 ```bash
 aws qbusiness get-application --region us-east-1 --application-id "app-abcd1234xmpl"
 ```
 
-List the user subscriptions:
+List the user subscriptions. Replace "us-east-1" with the AWS Region where your Amazon Q Business application is located.
 
 ```bash
 aws qbusiness list-subscriptions --region us-east-1 --application-id "app-abcd1234xmpl"
 ```
 
-If you created a web experience, list the web experiences:
+If you created a web experience, list the web experiences. Replace "us-east-1" with the AWS Region where your Amazon Q Business application is located.
 
 ```bash
 aws qbusiness list-web-experiences --region us-east-1 --application-id "app-abcd1234xmpl"
@@ -573,7 +573,7 @@ aws qbusiness list-web-experiences --region us-east-1 --application-id "app-abcd
 
 To avoid ongoing charges for the resources created in this tutorial, you should delete them when you're done.
 
-If you created a web experience, delete it first. Replace "app-abcd1234xmpl" with your actual application ID that's returned in Step 4 and replace "wex-abcd1234xmpl" with your actual web experience ID that's returned in Step 8.
+If you created a web experience, delete it first. Replace "app-abcd1234xmpl" with your actual application ID that's returned in Step 4 and replace "wex-abcd1234xmpl" with your actual web experience ID that's returned in Step 8. Replace "us-east-1" with the AWS Region where your Amazon Q Business application is located.
 
 ```bash
 aws qbusiness delete-web-experience \
@@ -582,7 +582,7 @@ aws qbusiness delete-web-experience \
   --web-experience-id "wex-abcd1234xmpl"
 ```
 
-Delete the user assignment. Replace "arn:aws:sso::123456789012:application/ssoins-abcd1234xmpl/apl-abcd1234xmpl" with your application ARN that's returned from Step 4. Replace "1234abcd-xmpl-5678-efgh-90ijklmnopqr" with the user ID that's returned in Step 3.
+Delete the user assignment. Replace "arn:aws:sso::123456789012:application/ssoins-abcd1234xmpl/apl-abcd1234xmpl" with your application ARN that's returned from Step 4. Replace "1234abcd-xmpl-5678-efgh-90ijklmnopqr" with the user ID that's returned in Step 3. Replace "us-east-1" with the AWS Region where your IAM Identity Center instance is located.
 
 ```bash
 aws sso-admin delete-application-assignment \
@@ -592,13 +592,13 @@ aws sso-admin delete-application-assignment \
   --principal-type USER
 ```
 
-Delete the Amazon Q Business application. Replace "app-abcd1234xmpl" with your actual application ID that's returned in Step 4.
+Delete the Amazon Q Business application. Replace "app-abcd1234xmpl" with your actual application ID that's returned in Step 4. Replace "us-east-1" with the AWS Region where your Amazon Q Business application is located.
 
 ```bash
 aws qbusiness delete-application --region us-east-1 --application-id "app-abcd1234xmpl"
 ```
 
-If you created a web experience role and policy, clean them up. Replace "123456789012" with your AWS account number.
+If you created a web experience role and policy, clean them up. Replace "123456789012" with your AWS account number. Replace "us-east-1" with the AWS Region name of your web experience role and policy.
 
 ```bash
 aws iam detach-role-policy \
@@ -611,7 +611,8 @@ aws iam delete-role --region us-east-1 --role-name "QBusinessWebRole-abcd1234"
 aws iam delete-policy --region us-east-1 --policy-arn "arn:aws:iam::123456789012:policy/QBusinessWebPolicy-abcd1234"
 ```
 
-Finally, clean up the service role and policy. Replace "123456789012" with your AWS account number.
+Finally, clean up the main application role and policy that are created in Step 2. Replace "123456789012" with your AWS account number. Replace "us-east-1" with the AWS Region name of your web experience role and policy.
+
 
 ```bash
 aws iam detach-role-policy \
