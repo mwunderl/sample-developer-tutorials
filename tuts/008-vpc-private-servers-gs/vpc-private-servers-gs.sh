@@ -1,3 +1,6 @@
+# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+# SPDX-License-Identifier: Apache-2.0
+
 #!/bin/bash
 
 # VPC with Private Subnets and NAT Gateways (IMDSv2 Compliant Version)
