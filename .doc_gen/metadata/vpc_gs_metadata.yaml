@@ -15,7 +15,7 @@ vpc_GettingStartedCLI:
   languages:
     Bash:
       versions:
-        - sdk_version: 3
+        - sdk_version: 2
           github_name: "Sample developer tutorials"
           github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/002-vpc-gs
           excerpts:
@@ -44,7 +44,7 @@ vpc_GettingStartedIpam:
   languages:
     Bash:
       versions:
-        - sdk_version: 3
+        - sdk_version: 2
           github_name: "Sample developer tutorials"
           github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/009-vpc-ipam-gs
           excerpts:
@@ -67,7 +67,7 @@ vpc_GettingStartedPrivate:
   languages:
     Bash:
       versions:
-        - sdk_version: 3
+        - sdk_version: 2
           github_name: "Sample developer tutorials"
           github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/008-vpc-private-servers-gs
           excerpts:
