@@ -1,5 +1,5 @@
 vpc_TransitGatewayGettingStarted:
-  title: Get started with AWS Transit Gateway using the CLI
+  title: Get started with Transit Gateway using the CLI
   title_abbrev: Get started with Transit Gateway
   synopsis_list:
     - Create a transit gateway with DNS support and default route table settings

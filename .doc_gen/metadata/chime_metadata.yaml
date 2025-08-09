@@ -1,5 +1,5 @@
 chime_GettingStarted:
-  title: Routing calls to AWS Lambda functions for Amazon Chime SDK PSTN audio
+  title: Routing calls to Lambda functions for Amazon Chime SDK PSTN audio
   title_abbrev: Get started with Chime SDK PSTN routing
   synopsis_list:
     - Search for and provision phone numbers for call routing
