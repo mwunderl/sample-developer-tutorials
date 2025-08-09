@@ -27,7 +27,5 @@ fargate_GettingStarted:
       CreateRole, AttachRolePolicy, DetachRolePolicy, DeleteRole}
     ec2: {
       DescribeVpcs, DescribeSubnets, DescribeSecurityGroups}
-    logs: {
-      GetLogEvents}
     sts: {
       GetCallerIdentity}
