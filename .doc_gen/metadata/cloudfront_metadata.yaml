@@ -23,7 +23,3 @@ cloudfront_GettingStarted:
   services:
     cloudfront: {
       CreateOriginAccessControl, GetOriginAccessControl, DeleteOriginAccessControl, CreateDistribution, GetDistribution, GetDistributionConfig, UpdateDistribution, DeleteDistribution, WaitDistributionDeployed}
-    s3: {
-      CreateBucket, PutObject, DeleteObject, DeleteBucket}
-    sts: {
-      GetCallerIdentity}

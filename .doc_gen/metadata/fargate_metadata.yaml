@@ -23,7 +23,3 @@ fargate_GettingStarted:
   services:
     batch: {
       CreateComputeEnvironment, DescribeComputeEnvironments, CreateJobQueue, DescribeJobQueues, RegisterJobDefinition, SubmitJob, DescribeJobs, UpdateJobQueue, DeleteJobQueue, UpdateComputeEnvironment, DeleteComputeEnvironment}
-    iam: {
-      CreateRole, AttachRolePolicy, DetachRolePolicy, DeleteRole}
-    sts: {
-      GetCallerIdentity}
