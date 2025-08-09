@@ -25,7 +25,5 @@ fargate_GettingStarted:
       CreateComputeEnvironment, DescribeComputeEnvironments, CreateJobQueue, DescribeJobQueues, RegisterJobDefinition, SubmitJob, DescribeJobs, UpdateJobQueue, DeleteJobQueue, UpdateComputeEnvironment, DeleteComputeEnvironment}
     iam: {
       CreateRole, AttachRolePolicy, DetachRolePolicy, DeleteRole}
-    ec2: {
-      DescribeVpcs, DescribeSubnets, DescribeSecurityGroups}
     sts: {
       GetCallerIdentity}
