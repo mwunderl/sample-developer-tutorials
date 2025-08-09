@@ -1,0 +1,25 @@
+lightsail_GettingStarted:
+  title: Get started with Amazon Lightsail using the CLI
+  title_abbrev: Get started with Lightsail
+  synopsis_list:
+    - Explore available blueprints and bundles for instance creation
+    - Create a Lightsail instance with Amazon Linux 2023
+    - Monitor instance status until running
+    - Download default key pair for SSH access
+    - Create and attach additional block storage disk
+    - Create an instance snapshot for backup
+    - Clean up resources to avoid ongoing charges
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/001-lightsail-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/001-lightsail-gs/lightsail-gs.sh
+  services:
+    lightsail: {
+      GetBlueprints, GetBundles, CreateInstances, GetInstanceState, GetInstance, DownloadDefaultKeyPair, CreateDisk, GetDisk, AttachDisk, DetachDisk, CreateInstanceSnapshot, GetInstanceSnapshot, DeleteInstanceSnapshot, DeleteDisk, DeleteInstance}

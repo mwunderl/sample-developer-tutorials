@@ -1,0 +1,25 @@
+vpc_TransitGatewayGettingStarted:
+  title: Get started with AWS Transit Gateway using the CLI
+  title_abbrev: Get started with Transit Gateway
+  synopsis_list:
+    - Create a transit gateway with DNS support and default route table settings
+    - Wait for the transit gateway to become available
+    - Attach two VPCs to the transit gateway using subnets
+    - Wait for VPC attachments to become available
+    - Add routes between VPCs through the transit gateway
+    - Test connectivity between VPC resources
+    - Clean up resources including routes, attachments, and transit gateway
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/012-transitgateway-gettingstarted
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/012-transitgateway-gettingstarted/transitgateway-gettingstarted.sh
+  services:
+    ec2: {
+      CreateTransitGateway, DescribeTransitGateways, CreateTransitGatewayVpcAttachment, DescribeTransitGatewayVpcAttachments, DescribeTransitGatewayAttachments, CreateRoute, DeleteRoute, DeleteTransitGatewayVpcAttachment, DeleteTransitGateway, DescribeAvailabilityZones, CreateVpc, DescribeVpcs, CreateSubnet, DescribeSubnets, DescribeRouteTables}

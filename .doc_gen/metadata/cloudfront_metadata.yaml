@@ -1,0 +1,31 @@
+cloudfront_GettingStarted:
+  title: Get started with a basic CloudFront distribution using the AWS CLI
+  title_abbrev: Get started with CloudFront
+  synopsis_list:
+    - Create an Amazon S3 bucket for content storage
+    - Upload sample content to the S3 bucket
+    - Create an origin access control (OAC) for secure S3 access
+    - Create a CloudFront distribution with S3 as origin
+    - Update S3 bucket policy to allow CloudFront access
+    - Wait for distribution deployment and test content access
+    - Clean up resources including distribution, OAC, and S3 bucket
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/005-cloudfront-gettingstarted
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/005-cloudfront-gettingstarted/cloudfront-gettingstarted.sh
+  services:
+    cloudfront: {
+      CreateOriginAccessControl, GetOriginAccessControl, DeleteOriginAccessControl, CreateDistribution, GetDistribution, GetDistributionConfig, UpdateDistribution, DeleteDistribution, WaitDistributionDeployed}
+    s3: {
+      CreateBucket, PutObject, DeleteObject, DeleteBucket}
+    s3api: {
+      PutBucketPolicy}
+    sts: {
+      GetCallerIdentity}
