@@ -1,0 +1,49 @@
+cloudmap_CustomAttributes:
+  title: Use custom attributes with AWS Cloud Map
+  title_abbrev: Cloud Map custom attributes
+  synopsis_list:
+    - Create an HTTP namespace for API-based service discovery
+    - Create a DynamoDB table and register it as a data service with custom attributes
+    - Create Lambda functions for reading and writing data
+    - Register Lambda functions as service instances with custom attributes for action-based discovery
+    - Build client applications that discover services using custom attributes
+    - Clean up all resources including Lambda functions, DynamoDB table, and Cloud Map services
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/004-cloudmap-custom-attributes
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/004-cloudmap-custom-attributes/cloudmap-custom-attributes.sh
+  services:
+    servicediscovery: {
+      CreateHttpNamespace, GetOperation, ListNamespaces, CreateService, ListServices, RegisterInstance, DeregisterInstance, DeleteService, DeleteNamespace}
+
+cloudmap_ServiceDiscovery:
+  title: Get started with AWS Cloud Map service discovery
+  title_abbrev: Cloud Map service discovery
+  synopsis_list:
+    - Create a public DNS namespace with Route 53 hosted zone integration
+    - Create services discoverable via DNS queries and API calls
+    - Register service instances with different discovery configurations
+    - Discover services using both DNS queries and Cloud Map API
+    - Verify service discovery using dig command and API calls
+    - Clean up resources in proper order (instances, services, namespace)
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/010-cloudmap-service-discovery
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/010-cloudmap-service-discovery/cloudmap-service-discovery.sh
+  services:
+    servicediscovery: {
+      CreatePublicDnsNamespace, GetOperation, ListNamespaces, CreateService, RegisterInstance, DiscoverInstances, DeregisterInstance, DeleteService, DeleteNamespace}
