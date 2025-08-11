@@ -1,5 +1,5 @@
 cloudmap_CustomAttributes:
-  title: Use custom attributes with AWS Cloud Map
+  title: Use custom attributes with Cloud Map
   title_abbrev: Cloud Map custom attributes
   synopsis_list:
     - Create an HTTP namespace for API-based service discovery
@@ -24,7 +24,7 @@ cloudmap_CustomAttributes:
       CreateHttpNamespace, GetOperation, ListNamespaces, CreateService, ListServices, RegisterInstance, DeregisterInstance, DeleteService, DeleteNamespace}
 
 cloudmap_ServiceDiscovery:
-  title: Get started with AWS Cloud Map service discovery
+  title: Get started with Cloud Map service discovery
   title_abbrev: Cloud Map service discovery
   synopsis_list:
     - Create a public DNS namespace with Route 53 hosted zone integration
