@@ -1,0 +1,26 @@
+msk_GettingStarted:
+  title: Get started with Amazon MSK (Managed Streaming for Apache Kafka) using the CLI
+  title_abbrev: MSK getting started
+  synopsis_list:
+    - Create MSK clusters for managed Apache Kafka streaming
+    - Configure cluster settings including broker types and storage
+    - Set up client authentication and security configurations
+    - Create Kafka topics and configure partitions
+    - Produce and consume messages using Kafka clients
+    - Monitor cluster metrics and performance
+    - Scale cluster capacity and update configurations
+    - Clean up MSK clusters and associated resources
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/057-amazon-managed-streaming-for-apache-kafka-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/057-amazon-managed-streaming-for-apache-kafka-gs/amazon-managed-streaming-for-apache-kafka-gs.sh
+  services:
+    kafka: {
+      CreateCluster, DeleteCluster, DescribeCluster, ListClusters}

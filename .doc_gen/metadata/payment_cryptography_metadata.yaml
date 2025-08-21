@@ -1,0 +1,26 @@
+payment_CryptographyGettingStarted:
+  title: Get started with AWS Payment Cryptography using the CLI
+  title_abbrev: Payment Cryptography getting started
+  synopsis_list:
+    - Create payment cryptography keys for secure transactions
+    - Configure key management policies and access controls
+    - Set up encryption and decryption operations for payment data
+    - Implement PIN verification and validation processes
+    - Configure key rotation and lifecycle management
+    - Monitor cryptographic operations and audit logs
+    - Integrate with payment processing systems
+    - Clean up cryptographic keys and resources
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/067-aws-payment-cryptography-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/067-aws-payment-cryptography-gs/aws-payment-cryptography-gs.sh
+  services:
+    payment-cryptography: {
+      CreateKey, DeleteKey, GetKey, ListKeys}

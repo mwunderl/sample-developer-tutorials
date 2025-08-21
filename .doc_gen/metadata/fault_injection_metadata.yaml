@@ -1,0 +1,26 @@
+fault_InjectionServiceGettingStarted:
+  title: Get started with AWS Fault Injection Service using the CLI
+  title_abbrev: Fault Injection Service getting started
+  synopsis_list:
+    - Create fault injection experiments for chaos engineering
+    - Configure experiment templates with fault actions
+    - Target AWS resources for fault injection testing
+    - Start and monitor fault injection experiments
+    - Analyze experiment results and system resilience
+    - Set up experiment safeguards and stop conditions
+    - Schedule recurring fault injection tests
+    - Clean up experiments and experiment templates
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/069-aws-fault-injection-service-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/069-aws-fault-injection-service-gs/aws-fault-injection-service-gs.sh
+  services:
+    fis: {
+      CreateExperimentTemplate, DeleteExperimentTemplate, StartExperiment, StopExperiment, GetExperiment}

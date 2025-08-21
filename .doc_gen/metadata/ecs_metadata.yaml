@@ -2,6 +2,111 @@ ecs_EC2GettingStarted:
   title: Get started with Amazon ECS on EC2 using the CLI
   title_abbrev: ECS on EC2 getting started
   synopsis_list:
+    - Create ECS clusters to manage containerized applications
+    - Launch and configure EC2 instances as ECS container instances
+    - Register task definitions for containerized applications
+    - Create and deploy ECS services with desired task counts
+    - Monitor service and task status using ECS APIs
+    - List and describe cluster resources including container instances
+    - Update service configurations and manage task lifecycle
+    - Clean up all resources including services, tasks, and clusters
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/018-ecs-ec2
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/018-ecs-ec2/ecs-ec2-getting-started.sh
+  services:
+    ecs: {
+      CreateCluster, DeleteCluster, ListContainerInstances, DescribeContainerInstances, RegisterTaskDefinition, DeregisterTaskDefinition, CreateService, UpdateService, DeleteService, DescribeServices, ListServices, WaitServicesStable, ListTasks, DescribeTasks, StopTask, WaitTasksStopped}
+
+ecs_ServiceConnect:
+  title: Set up Amazon ECS Service Connect using the CLI
+  title_abbrev: ECS Service Connect
+  synopsis_list:
+    - Create ECS clusters with Service Connect namespace configuration
+    - Register task definitions with Service Connect port mappings
+    - Create services with Service Connect client and server configurations
+    - Configure service discovery and load balancing through Service Connect
+    - Monitor service connectivity and task health status
+    - Test inter-service communication through Service Connect
+    - Manage service scaling and updates with Service Connect
+    - Clean up Service Connect resources and configurations
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/085-amazon-ecs-service-connect
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/085-amazon-ecs-service-connect/amazon-ecs-service-connect.sh
+  services:
+    ecs: {
+      CreateCluster, DeleteCluster, DescribeClusters, RegisterTaskDefinition, DeregisterTaskDefinition, ListTaskDefinitions, CreateService, UpdateService, DeleteService, DescribeServices, ListTasks, DescribeTasks, WaitServicesStable}
+
+ecs_FargateLinux:
+  title: Get started with Amazon ECS on Fargate for Linux using the CLI
+  title_abbrev: ECS Fargate Linux
+  synopsis_list:
+    - Create ECS clusters for serverless container deployment
+    - Register task definitions with Fargate launch type and resource requirements
+    - Configure networking with VPC, subnets, and security groups
+    - Create ECS services with Fargate launch type and desired task counts
+    - Wait for service stabilization and monitor task health
+    - Retrieve task network information and public IP addresses
+    - Test application connectivity and service endpoints
+    - Scale services and manage task lifecycle on Fargate
+    - Clean up services, task definitions, and clusters
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/086-amazon-ecs-fargate-linux
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/086-amazon-ecs-fargate-linux/amazon-ecs-fargate-linux.sh
+  services:
+    ecs: {
+      CreateCluster, DeleteCluster, RegisterTaskDefinition, DeregisterTaskDefinition, ListTaskDefinitions, CreateService, UpdateService, DeleteService, DescribeServices, ListTasks, DescribeTasks, WaitServicesStable}
+  title: Set up Amazon ECS Service Connect using the CLI
+  title_abbrev: ECS Service Connect
+  synopsis_list:
+    - Create ECS clusters with Service Connect namespace configuration
+    - Register task definitions with Service Connect port mappings
+    - Create services with Service Connect client and server configurations
+    - Configure service discovery and load balancing through Service Connect
+    - Monitor service connectivity and task health status
+    - Test inter-service communication through Service Connect
+    - Manage service scaling and updates with Service Connect
+    - Clean up Service Connect resources and configurations
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/085-amazon-ecs-service-connect
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/085-amazon-ecs-service-connect/amazon-ecs-service-connect.sh
+  services:
+    ecs: {
+      CreateCluster, DeleteCluster, DescribeClusters, RegisterTaskDefinition, DeregisterTaskDefinition, ListTaskDefinitions, CreateService, UpdateService, DeleteService, DescribeServices, ListTasks, DescribeTasks, WaitServicesStable}
+  title: Get started with Amazon ECS on EC2 using the CLI
+  title_abbrev: ECS on EC2 getting started
+  synopsis_list:
     - Create an ECS cluster to manage containerized applications
     - Launch and configure EC2 instances as ECS container instances
     - Register task definitions for containerized applications

@@ -1,0 +1,26 @@
+iot_DeviceDefenderGettingStarted:
+  title: Get started with AWS IoT Device Defender using the CLI
+  title_abbrev: IoT Device Defender getting started
+  synopsis_list:
+    - Set up AWS IoT Device Defender for device security monitoring
+    - Create security profiles with behavioral metrics
+    - Configure device fleets for security monitoring
+    - Set up security alerts and notifications
+    - Monitor device behavior and detect anomalies
+    - Investigate security violations and incidents
+    - Configure mitigation actions for security threats
+    - Clean up security profiles and monitoring resources
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/079-aws-iot-device-defender-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/079-aws-iot-device-defender-gs/aws-iot-device-defender-gs.sh
+  services:
+    iot: {
+      CreateSecurityProfile, DeleteSecurityProfile, AttachSecurityProfile, DetachSecurityProfile, ListSecurityProfiles}

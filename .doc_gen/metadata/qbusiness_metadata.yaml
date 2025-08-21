@@ -1,0 +1,53 @@
+qbusiness_ICA:
+  title: Set up Amazon Q Business with Identity Center Authentication
+  title_abbrev: Q Business with ICA
+  synopsis_list:
+    - Create Amazon Q Business applications with Identity Center integration
+    - Configure user authentication through AWS IAM Identity Center
+    - Set up data sources for Q Business knowledge base
+    - Configure retrieval and generation settings
+    - Test Q Business chat functionality with authenticated users
+    - Monitor application usage and performance
+    - Manage user access and permissions
+    - Clean up Q Business applications and resources
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/040-qbusiness-ica
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/040-qbusiness-ica/qbusiness-ica.sh
+  services:
+    qbusiness: {
+      CreateApplication, DeleteApplication, CreateRetriever, DeleteRetriever, CreateDataSource, DeleteDataSource}
+
+qbusiness_Anonymous:
+  title: Set up Amazon Q Business with anonymous access
+  title_abbrev: Q Business anonymous
+  synopsis_list:
+    - Create Amazon Q Business applications with anonymous access
+    - Configure public access settings for Q Business
+    - Set up data sources without user authentication
+    - Configure retrieval settings for anonymous users
+    - Test Q Business functionality without login
+    - Monitor anonymous usage and rate limiting
+    - Configure content filtering and safety settings
+    - Clean up anonymous Q Business applications
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/042-qbusiness-anon
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/042-qbusiness-anon/qbusiness-anon.sh
+  services:
+    qbusiness: {
+      CreateApplication, DeleteApplication, CreateRetriever, DeleteRetriever, CreateDataSource, DeleteDataSource}

@@ -1,0 +1,26 @@
+mediaconnect_GettingStarted:
+  title: Get started with AWS Elemental MediaConnect using the CLI
+  title_abbrev: MediaConnect getting started
+  synopsis_list:
+    - Create MediaConnect flows for live video transport
+    - Configure flow sources and destinations
+    - Set up entitlements for content sharing
+    - Configure encryption and security settings
+    - Monitor flow performance and quality metrics
+    - Set up redundant flows for high availability
+    - Manage flow lifecycle and updates
+    - Clean up MediaConnect flows and resources
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/081-aws-elemental-mediaconnect-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/081-aws-elemental-mediaconnect-gs/aws-elemental-mediaconnect-gs.sh
+  services:
+    mediaconnect: {
+      CreateFlow, DeleteFlow, DescribeFlow, StartFlow, StopFlow, AddFlowOutputs, RemoveFlowOutput}

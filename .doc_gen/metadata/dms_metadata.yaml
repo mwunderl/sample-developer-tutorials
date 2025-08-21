@@ -1,0 +1,26 @@
+dms_GettingStarted:
+  title: Get started with AWS Database Migration Service using the CLI
+  title_abbrev: DMS getting started
+  synopsis_list:
+    - Create DMS replication instances for database migration
+    - Set up source and target database endpoints
+    - Configure database migration tasks with table mappings
+    - Start and monitor database migration processes
+    - Validate data migration accuracy and completeness
+    - Handle migration errors and troubleshooting
+    - Manage ongoing replication for continuous data sync
+    - Clean up migration resources and endpoints
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/075-aws-database-migration-service-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/075-aws-database-migration-service-gs/aws-database-migration-service-gs.sh
+  services:
+    dms: {
+      CreateReplicationInstance, DeleteReplicationInstance, CreateEndpoint, DeleteEndpoint, CreateReplicationTask, DeleteReplicationTask, StartReplicationTask, StopReplicationTask, DescribeReplicationTasks}

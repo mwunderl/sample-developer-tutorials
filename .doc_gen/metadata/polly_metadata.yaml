@@ -1,0 +1,26 @@
+polly_GettingStarted:
+  title: Get started with Amazon Polly using the CLI
+  title_abbrev: Polly getting started
+  synopsis_list:
+    - List available voices for text-to-speech conversion
+    - Convert plain text to speech using various voice options
+    - Use SSML markup for enhanced speech synthesis with breaks and emphasis
+    - Create and upload pronunciation lexicons for custom word pronunciations
+    - List and manage lexicons in your account
+    - Apply lexicons to speech synthesis for improved pronunciation
+    - Generate audio files in MP3 format from text input
+    - Clean up lexicons and audio files
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/082-amazon-polly-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/082-amazon-polly-gs/amazon-polly-getting-started.sh
+  services:
+    polly: {
+      DescribeVoices, SynthesizeSpeech, PutLexicon, DeleteLexicon, ListLexicons, GetLexicon}

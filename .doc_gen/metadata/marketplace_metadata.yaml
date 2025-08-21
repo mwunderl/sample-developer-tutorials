@@ -1,0 +1,26 @@
+marketplace_BuyerGettingStarted:
+  title: Get started with AWS Marketplace as a buyer using the CLI
+  title_abbrev: Marketplace buyer getting started
+  synopsis_list:
+    - Browse and search AWS Marketplace for software products
+    - Launch EC2 instances with Marketplace AMIs
+    - Configure security groups for Marketplace applications
+    - Manage subscriptions and billing for Marketplace products
+    - Test deployed applications from Marketplace
+    - Monitor usage and costs of Marketplace products
+    - Terminate instances and manage Marketplace subscriptions
+    - Clean up resources and stop billing charges
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/030-marketplace-buyer-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/030-marketplace-buyer-gs/marketplace-buyer-getting-started.sh
+  services:
+    ec2: {
+      RunInstances, TerminateInstances, DescribeInstances, CreateSecurityGroup, DeleteSecurityGroup, AuthorizeSecurityGroupIngress}

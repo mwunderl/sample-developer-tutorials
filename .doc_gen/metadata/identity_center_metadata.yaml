@@ -1,0 +1,26 @@
+identity_CenterGettingStarted:
+  title: Get started with AWS IAM Identity Center using the CLI
+  title_abbrev: IAM Identity Center getting started
+  synopsis_list:
+    - Set up AWS IAM Identity Center for centralized access management
+    - Create and manage users and groups in Identity Center
+    - Configure permission sets for AWS account access
+    - Assign users and groups to AWS accounts with specific permissions
+    - Set up SAML and OIDC identity providers
+    - Configure multi-factor authentication (MFA) requirements
+    - Monitor user access and audit logs
+    - Clean up Identity Center configurations and assignments
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/045-aws-iam-identity-center-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/045-aws-iam-identity-center-gs/aws-iam-identity-center-gs.sh
+  services:
+    sso-admin: {
+      CreatePermissionSet, DeletePermissionSet, CreateAccountAssignment, DeleteAccountAssignment, ListPermissionSets, ListAccountAssignments}

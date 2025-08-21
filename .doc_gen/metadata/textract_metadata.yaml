@@ -1,0 +1,26 @@
+textract_GettingStarted:
+  title: Get started with Amazon Textract using the CLI
+  title_abbrev: Textract getting started
+  synopsis_list:
+    - Verify Amazon Textract availability in your AWS region
+    - Upload sample documents to S3 for text extraction
+    - Analyze documents to extract text, forms, and tables
+    - Configure feature types for different extraction capabilities
+    - Process document analysis results and extract key information
+    - Handle different document formats and layouts
+    - Parse extracted text and structured data from documents
+    - Clean up S3 resources and temporary files
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/074-amazon-textract-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/074-amazon-textract-gs/amazon-textract-getting-started.sh
+  services:
+    textract: {
+      AnalyzeDocument}

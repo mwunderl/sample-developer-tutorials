@@ -1,0 +1,26 @@
+vpc_LatticeGettingStarted:
+  title: Get started with Amazon VPC Lattice using the CLI
+  title_abbrev: VPC Lattice getting started
+  synopsis_list:
+    - Create VPC Lattice service networks for application connectivity
+    - Register services with VPC Lattice for service discovery
+    - Configure service network associations with VPCs
+    - Set up listeners and rules for traffic routing
+    - Create target groups for service endpoints
+    - Monitor service network traffic and health
+    - Configure access policies for service security
+    - Clean up service networks and associated resources
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/055-amazon-vpc-lattice-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/055-amazon-vpc-lattice-gs/amazon-vpc-lattice-gs.sh
+  services:
+    vpc-lattice: {
+      CreateServiceNetwork, DeleteServiceNetwork, CreateService, DeleteService, CreateServiceNetworkVpcAssociation, DeleteServiceNetworkVpcAssociation}

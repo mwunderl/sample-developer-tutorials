@@ -1,0 +1,26 @@
+waf_GettingStarted:
+  title: Get started with AWS WAF using the CLI
+  title_abbrev: WAF getting started
+  synopsis_list:
+    - Create WAF Web ACLs with custom rules and AWS managed rules
+    - Configure string match rules for content filtering
+    - Add AWS managed rule groups for common attack protection
+    - Associate Web ACLs with CloudFront distributions
+    - Update Web ACL configurations and rule priorities
+    - Monitor Web ACL metrics and blocked requests
+    - Disassociate Web ACLs from resources
+    - Clean up Web ACLs and associated rules
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/052-aws-waf-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/052-aws-waf-gs/aws-waf-gs.sh
+  services:
+    wafv2: {
+      CreateWebAcl, DeleteWebAcl, GetWebAcl, UpdateWebAcl, AssociateWebAcl, DisassociateWebAcl}

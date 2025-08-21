@@ -1,0 +1,26 @@
+direct_ConnectGettingStarted:
+  title: Get started with AWS Direct Connect using the CLI
+  title_abbrev: Direct Connect getting started
+  synopsis_list:
+    - Create Direct Connect connections for dedicated network links
+    - Set up virtual interfaces (VIFs) for network connectivity
+    - Configure BGP routing for Direct Connect connections
+    - Associate virtual interfaces with Direct Connect gateways
+    - Monitor connection status and network performance
+    - Set up redundant connections for high availability
+    - Configure VLAN tagging and network segmentation
+    - Clean up Direct Connect resources and connections
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/051-aws-direct-connect-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/051-aws-direct-connect-gs/aws-direct-connect-gs.sh
+  services:
+    directconnect: {
+      CreateConnection, DeleteConnection, DescribeConnections, CreateVirtualInterface, DeleteVirtualInterface}

@@ -1,0 +1,26 @@
+account_ManagementGettingStarted:
+  title: Get started with AWS Account Management using the CLI
+  title_abbrev: Account Management getting started
+  synopsis_list:
+    - Manage AWS account settings and configurations
+    - Set up account contact information and preferences
+    - Configure billing and payment methods
+    - Manage account security settings and MFA
+    - Set up account notifications and alerts
+    - Monitor account usage and service limits
+    - Configure account-level policies and permissions
+    - Manage account closure and data retention
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/077-aws-account-management-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/077-aws-account-management-gs/aws-account-management-gs.sh
+  services:
+    account: {
+      GetContactInformation, PutContactInformation}

@@ -1,0 +1,26 @@
+iot_CoreGettingStarted:
+  title: Get started with AWS IoT Core using the CLI
+  title_abbrev: IoT Core getting started
+  synopsis_list:
+    - Create IoT policies for device permissions and access control
+    - Create IoT things to represent physical devices
+    - Generate device certificates and keys for secure authentication
+    - Attach policies to certificates for authorization
+    - Attach certificates to things for device identity
+    - Retrieve IoT endpoints for device connectivity
+    - Configure device SDK for MQTT communication
+    - Clean up IoT resources including policies, things, and certificates
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/063-aws-iot-core-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/063-aws-iot-core-gs/aws-iot-core-gs.sh
+  services:
+    iot: {
+      CreatePolicy, DeletePolicy, CreateThing, DeleteThing, CreateKeysAndCertificate, DeleteCertificate, UpdateCertificate, AttachPolicy, DetachPolicy, AttachThingPrincipal, DetachThingPrincipal, DescribeEndpoint}

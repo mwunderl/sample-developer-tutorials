@@ -1,0 +1,26 @@
+datazone_GettingStarted:
+  title: Get started with Amazon DataZone using the CLI
+  title_abbrev: DataZone getting started
+  synopsis_list:
+    - Create DataZone domains for data governance and cataloging
+    - Set up data projects for organizing data assets
+    - Configure data sources and discovery jobs
+    - Publish data assets to the DataZone catalog
+    - Set up data subscriptions and access requests
+    - Manage data lineage and metadata
+    - Configure data quality rules and monitoring
+    - Clean up DataZone domains and projects
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/059-amazon-datazone-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/059-amazon-datazone-gs/amazon-datazone-gs.sh
+  services:
+    datazone: {
+      CreateDomain, DeleteDomain, CreateProject, DeleteProject, CreateDataSource, DeleteDataSource}

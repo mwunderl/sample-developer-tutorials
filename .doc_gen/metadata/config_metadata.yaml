@@ -1,0 +1,26 @@
+config_GettingStarted:
+  title: Get started with AWS Config using the CLI
+  title_abbrev: Config getting started
+  synopsis_list:
+    - Set up AWS Config service for resource compliance monitoring
+    - Create configuration recorders to track resource changes
+    - Configure delivery channels for sending configuration data to S3
+    - Define recording groups to specify which resources to monitor
+    - Start configuration recorders to begin tracking resources
+    - Verify Config setup and recorder status
+    - Monitor resource configuration changes and compliance
+    - Clean up configuration recorders and delivery channels
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/053-aws-config-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/053-aws-config-gs/aws-config-gs.sh
+  services:
+    configservice: {
+      DescribeConfigurationRecorders, PutConfigurationRecorder, DeleteConfigurationRecorder, DescribeDeliveryChannels, PutDeliveryChannel, DeleteDeliveryChannel, StartConfigurationRecorder, StopConfigurationRecorder, DescribeConfigurationRecorderStatus}

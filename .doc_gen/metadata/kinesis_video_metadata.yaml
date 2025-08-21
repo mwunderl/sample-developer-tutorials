@@ -1,0 +1,26 @@
+kinesis_VideoStreamsGettingStarted:
+  title: Get started with Amazon Kinesis Video Streams using the CLI
+  title_abbrev: Kinesis Video Streams getting started
+  synopsis_list:
+    - Create Kinesis Video Streams for real-time video ingestion
+    - Configure stream settings including retention periods
+    - Set up video producers to send data to streams
+    - Manage stream lifecycle and data retention policies
+    - Monitor stream metrics and performance
+    - Retrieve stream endpoints for video playback
+    - Configure access policies for stream security
+    - Clean up video streams and associated resources
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/054-amazon-kinesis-video-streams-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/054-amazon-kinesis-video-streams-gs/amazon-kinesis-video-streams-gs.sh
+  services:
+    kinesisvideo: {
+      CreateStream, DeleteStream, DescribeStream, ListStreams}

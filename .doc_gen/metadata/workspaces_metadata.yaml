@@ -1,0 +1,26 @@
+workspaces_Personal:
+  title: Get started with Amazon WorkSpaces personal desktops using the CLI
+  title_abbrev: WorkSpaces personal desktops
+  synopsis_list:
+    - List and describe available workspace directories
+    - Register directories with WorkSpaces service
+    - Browse available workspace bundles and configurations
+    - Create personal WorkSpaces with specified bundles and users
+    - Monitor WorkSpace creation status and availability
+    - Manage WorkSpace lifecycle and user access
+    - Terminate WorkSpaces when no longer needed
+    - Deregister directories from WorkSpaces service
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/035-workspaces-personal
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/035-workspaces-personal/workspaces-personal.sh
+  services:
+    workspaces: {
+      DescribeWorkspaceDirectories, RegisterWorkspaceDirectory, DeregisterWorkspaceDirectory, DescribeWorkspaceBundles, CreateWorkspaces, DescribeWorkspaces, TerminateWorkspaces}

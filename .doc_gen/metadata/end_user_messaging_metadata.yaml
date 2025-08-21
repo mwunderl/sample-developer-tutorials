@@ -1,0 +1,26 @@
+end_UserMessagingGettingStarted:
+  title: Get started with AWS End User Messaging using the CLI
+  title_abbrev: End User Messaging getting started
+  synopsis_list:
+    - Set up AWS End User Messaging for SMS and voice communications
+    - Configure phone numbers and messaging channels
+    - Send SMS messages to end users
+    - Set up voice calling capabilities
+    - Configure message templates and personalization
+    - Monitor message delivery and engagement metrics
+    - Handle opt-outs and compliance requirements
+    - Clean up messaging resources and phone numbers
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/049-aws-end-user-messaging-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/049-aws-end-user-messaging-gs/aws-end-user-messaging-gs.sh
+  services:
+    pinpoint-sms-voice-v2: {
+      SendTextMessage, CreateConfigurationSet, DeleteConfigurationSet}

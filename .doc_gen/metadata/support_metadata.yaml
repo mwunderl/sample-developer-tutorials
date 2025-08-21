@@ -1,0 +1,26 @@
+support_GettingStarted:
+  title: Get started with AWS Support using the CLI
+  title_abbrev: Support getting started
+  synopsis_list:
+    - Create AWS Support cases for technical assistance
+    - List and describe existing support cases
+    - Add communications to support cases
+    - Resolve and close support cases
+    - Check support plan and service limits
+    - Access Trusted Advisor recommendations
+    - Monitor case status and resolution progress
+    - Manage support case lifecycle and communications
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/062-aws-support-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/062-aws-support-gs/aws-support-gs.sh
+  services:
+    support: {
+      CreateCase, DescribeCases, AddCommunicationToCase, ResolveCase}

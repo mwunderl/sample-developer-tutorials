@@ -1,0 +1,26 @@
+network_FirewallGettingStarted:
+  title: Get started with AWS Network Firewall using the CLI
+  title_abbrev: Network Firewall getting started
+  synopsis_list:
+    - Create Network Firewall policies with custom rules
+    - Deploy firewalls in VPC subnets for traffic inspection
+    - Configure stateful and stateless rule groups
+    - Set up firewall logging and monitoring
+    - Associate firewall policies with VPC route tables
+    - Monitor firewall metrics and blocked traffic
+    - Update firewall rules and policies
+    - Clean up firewall resources and policies
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/047-aws-network-firewall-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/047-aws-network-firewall-gs/aws-network-firewall-gs.sh
+  services:
+    network-firewall: {
+      CreateFirewall, DeleteFirewall, CreateFirewallPolicy, DeleteFirewallPolicy, CreateRuleGroup, DeleteRuleGroup, AssociateFirewallPolicy}

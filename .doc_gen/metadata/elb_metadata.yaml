@@ -1,0 +1,26 @@
+elb_GettingStarted:
+  title: Get started with Elastic Load Balancing using the CLI
+  title_abbrev: ELB getting started
+  synopsis_list:
+    - Create Application Load Balancers for distributing traffic
+    - Configure load balancer settings including subnets and security groups
+    - Create target groups for routing requests to healthy targets
+    - Register EC2 instances as targets in target groups
+    - Create HTTP listeners for handling incoming requests
+    - Monitor target health and load balancer status
+    - Wait for load balancer availability and target registration
+    - Clean up listeners, load balancers, and target groups
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/058-elastic-load-balancing-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/058-elastic-load-balancing-gs/elastic-load-balancing-gs.sh
+  services:
+    elbv2: {
+      CreateLoadBalancer, DeleteLoadBalancer, DescribeLoadBalancers, WaitLoadBalancerAvailable, WaitLoadBalancersDeleted, CreateTargetGroup, DeleteTargetGroup, RegisterTargets, DescribeTargetHealth, CreateListener, DeleteListener}

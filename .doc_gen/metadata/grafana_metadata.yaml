@@ -1,0 +1,26 @@
+grafana_ManagedGettingStarted:
+  title: Get started with Amazon Managed Grafana using the CLI
+  title_abbrev: Managed Grafana getting started
+  synopsis_list:
+    - Create Amazon Managed Grafana workspaces
+    - Configure authentication providers for Grafana access
+    - Set up data sources for metrics and logs visualization
+    - Create and manage Grafana dashboards
+    - Configure user permissions and workspace access
+    - Set up alerting and notification channels
+    - Monitor workspace usage and performance
+    - Clean up Grafana workspaces and resources
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/044-amazon-managed-grafana-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/044-amazon-managed-grafana-gs/amazon-managed-grafana-gs.sh
+  services:
+    grafana: {
+      CreateWorkspace, DeleteWorkspace, DescribeWorkspace, UpdateWorkspace}

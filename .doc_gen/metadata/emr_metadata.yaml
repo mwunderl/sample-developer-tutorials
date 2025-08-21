@@ -1,0 +1,26 @@
+emr_GettingStarted:
+  title: Get started with Amazon EMR using the CLI
+  title_abbrev: EMR getting started
+  synopsis_list:
+    - Create IAM default roles for EMR cluster operations
+    - Launch EMR clusters with Spark and Hadoop applications
+    - Configure cluster settings including instance types and release labels
+    - Wait for cluster to reach running and waiting states
+    - Submit Spark applications as steps to process data
+    - Monitor step execution status and completion
+    - Access cluster via SSH for debugging and management
+    - Terminate clusters and clean up resources
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/037-emr-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/037-emr-gs/emr-gs.sh
+  services:
+    emr: {
+      CreateDefaultRoles, CreateCluster, DescribeCluster, WaitClusterRunning, AddSteps, DescribeStep, WaitStepComplete, TerminateClusters, WaitClusterTerminated}
