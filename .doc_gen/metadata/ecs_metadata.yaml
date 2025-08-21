@@ -1,0 +1,26 @@
+ecs_EC2GettingStarted:
+  title: Get started with Amazon ECS on EC2 using the CLI
+  title_abbrev: ECS on EC2 getting started
+  synopsis_list:
+    - Create an ECS cluster to manage containerized applications
+    - Launch and configure EC2 instances as ECS container instances
+    - Register task definitions for containerized applications
+    - Create and deploy ECS services with desired task counts
+    - Monitor service and task status using ECS APIs
+    - List and describe cluster resources including container instances
+    - Update service configurations and manage task lifecycle
+    - Clean up all resources including services, tasks, and clusters
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/018-ecs-ec2
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/018-ecs-ec2/ecs-ec2-getting-started.sh
+  services:
+    ecs: {
+      CreateCluster, DeleteCluster, ListContainerInstances, DescribeContainerInstances, RegisterTaskDefinition, DeregisterTaskDefinition, CreateService, UpdateService, DeleteService, DescribeServices, ListServices, WaitServicesStable, ListTasks, DescribeTasks, StopTask, WaitTasksStopped}

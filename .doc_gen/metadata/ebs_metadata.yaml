@@ -1,0 +1,52 @@
+ebs_GettingStartedVolumes:
+  title: Get started with Amazon EBS volumes using the CLI
+  title_abbrev: EBS volumes getting started
+  synopsis_list:
+    - Create EBS volumes with different types (gp3) and sizes
+    - Monitor volume creation status and wait for availability
+    - Describe volume details and configuration settings
+    - Attach EBS volumes to running EC2 instances
+    - Verify volume attachment and check attachment status
+    - Detach volumes from instances when needed
+    - Delete EBS volumes to avoid ongoing charges
+    - Manage EC2 instances for volume attachment testing
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/020-ebs-gs-volumes
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/020-ebs-gs-volumes/ebs-gs-volumes.sh
+  services:
+    ec2: {
+      CreateVolume, DescribeVolumes, AttachVolume, DetachVolume, DeleteVolume, WaitVolumeAvailable, DescribeAvailabilityZones, DescribeInstanceTypeOfferings, DescribeInstances, RunInstances, TerminateInstances, WaitInstanceRunning, WaitInstanceTerminated, DescribeImages, DescribeVpcs, DescribeSubnets, CreateSecurityGroup, DeleteSecurityGroup, AuthorizeSecurityGroupIngress}
+
+ebs_Intermediate:
+  title: Intermediate Amazon EBS operations using the CLI
+  title_abbrev: EBS intermediate operations
+  synopsis_list:
+    - Create EBS volumes with advanced configuration options
+    - Create snapshots of EBS volumes for backup and recovery
+    - Monitor snapshot creation progress and completion status
+    - Create new volumes from existing snapshots
+    - Modify volume types and performance characteristics
+    - Copy snapshots across regions for disaster recovery
+    - Clean up volumes and snapshots to manage costs
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/022-ebs-intermediate
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/022-ebs-intermediate/ebs-intermediate.sh
+  services:
+    ec2: {
+      CreateVolume, DescribeVolumes, AttachVolume, DetachVolume, DeleteVolume, WaitVolumeAvailable, DescribeAvailabilityZones, DescribeInstanceTypeOfferings, DescribeInstances, RunInstances, TerminateInstances, WaitInstanceRunning, WaitInstanceTerminated, DescribeImages, DescribeVpcs, DescribeSubnets, CreateSecurityGroup, DeleteSecurityGroup, AuthorizeSecurityGroupIngress, CreateSnapshot, DescribeSnapshots, DeleteSnapshot, WaitSnapshotCompleted, CopySnapshot}

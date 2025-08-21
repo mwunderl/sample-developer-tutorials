@@ -1,0 +1,26 @@
+cloudformation_GettingStarted:
+  title: Get started with AWS CloudFormation using the CLI
+  title_abbrev: CloudFormation getting started
+  synopsis_list:
+    - Create CloudFormation templates with EC2 instances and security groups
+    - Validate template syntax and structure before deployment
+    - Create CloudFormation stacks with parameter values
+    - Monitor stack creation progress and wait for completion
+    - List stack resources and their current status
+    - Retrieve stack outputs for application connectivity
+    - Update stack configurations and manage stack lifecycle
+    - Delete stacks and clean up all associated resources
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/021-cloudformation-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/021-cloudformation-gs/cloudformation-gs.sh
+  services:
+    cloudformation: {
+      ValidateTemplate, CreateStack, DescribeStacks, ListStackResources, DeleteStack, WaitStackCreateComplete, WaitStackDeleteComplete}

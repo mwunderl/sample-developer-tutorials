@@ -1,0 +1,27 @@
+dynamodb_GettingStarted:
+  title: Get started with Amazon DynamoDB using the CLI
+  title_abbrev: DynamoDB getting started
+  synopsis_list:
+    - Create DynamoDB tables with partition and sort keys
+    - Configure table settings including billing mode and throughput
+    - Enable point-in-time recovery for data protection
+    - Insert items into tables using put-item operations
+    - Retrieve specific items using get-item with consistent reads
+    - Update existing items with new attributes and values
+    - Query tables using key condition expressions
+    - Scan tables to retrieve all items with filtering
+    - Delete tables and wait for deletion completion
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/070-amazon-dynamodb-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/070-amazon-dynamodb-gs/amazon-dynamodb-gs.sh
+  services:
+    dynamodb: {
+      CreateTable, DescribeTable, UpdateContinuousBackups, PutItem, GetItem, UpdateItem, Query, DeleteTable, WaitTableNotExists}

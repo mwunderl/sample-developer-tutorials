@@ -1,0 +1,28 @@
+redshift_Provisioned:
+  title: Get started with Amazon Redshift provisioned clusters using the CLI
+  title_abbrev: Redshift provisioned clusters
+  synopsis_list:
+    - Create Redshift provisioned clusters with specified node types and configurations
+    - Wait for cluster availability and monitor cluster status
+    - Attach IAM roles to clusters for data access permissions
+    - Create databases and tables using Redshift Data API
+    - Load data from S3 into Redshift tables using COPY commands
+    - Execute SQL queries and retrieve results using Data API
+    - Monitor statement execution status and handle errors
+    - Clean up clusters, databases, and associated resources
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/039-redshift-provisioned
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/039-redshift-provisioned/redshift-provisioned.sh
+  services:
+    redshift: {
+      CreateCluster, DeleteCluster, DescribeClusters, WaitClusterAvailable, WaitClusterDeleted, ModifyClusterIamRoles}
+    redshift-data: {
+      ExecuteStatement, DescribeStatement, GetStatementResult}

@@ -1,0 +1,26 @@
+sns_GettingStarted:
+  title: Get started with Amazon SNS using the CLI
+  title_abbrev: SNS getting started
+  synopsis_list:
+    - Create SNS topics for message publishing and distribution
+    - Subscribe email addresses to topics for notifications
+    - Confirm email subscriptions through verification process
+    - List subscriptions by topic to verify configuration
+    - Publish messages to topics for distribution to subscribers
+    - Monitor message delivery and subscription status
+    - Manage topic attributes and subscription settings
+    - Clean up topics and subscriptions
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/048-amazon-simple-notification-service-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/048-amazon-simple-notification-service-gs/amazon-simple-notification-service-gs.sh
+  services:
+    sns: {
+      CreateTopic, DeleteTopic, Subscribe, Unsubscribe, ListSubscriptionsByTopic, Publish}

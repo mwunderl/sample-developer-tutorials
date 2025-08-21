@@ -1,0 +1,29 @@
+sagemaker_FeatureStore:
+  title: Get started with Amazon SageMaker Feature Store using the CLI
+  title_abbrev: SageMaker Feature Store
+  synopsis_list:
+    - Create feature groups with defined schemas for machine learning features
+    - Configure online and offline storage for feature data
+    - Set up S3 buckets for offline feature storage
+    - Ingest feature records into feature groups using runtime APIs
+    - Retrieve individual records by identifier from feature store
+    - Perform batch retrieval of multiple feature records
+    - List and describe feature groups and their configurations
+    - Monitor feature group creation status and availability
+    - Clean up feature groups and associated storage resources
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/028-sagemaker-featurestore
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/028-sagemaker-featurestore/sagemaker-featurestore.sh
+  services:
+    sagemaker: {
+      CreateFeatureGroup, DeleteFeatureGroup, DescribeFeatureGroup, ListFeatureGroups}
+    sagemaker-featurestore-runtime: {
+      PutRecord, GetRecord, BatchGetRecord}

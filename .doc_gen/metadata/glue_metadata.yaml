@@ -1,0 +1,25 @@
+glue_GettingStarted:
+  title: Get started with AWS Glue Data Catalog using the CLI
+  title_abbrev: Glue Data Catalog getting started
+  synopsis_list:
+    - Create Glue databases for organizing data catalog metadata
+    - Define table schemas with columns, data types, and storage descriptors
+    - Create tables in the Glue Data Catalog with detailed metadata
+    - Verify database and table creation through Glue APIs
+    - Retrieve table details and schema information
+    - Query and explore data catalog resources
+    - Clean up databases and tables to avoid ongoing charges
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/024-glue-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/024-glue-gs/glue-gs.sh
+  services:
+    glue: {
+      CreateDatabase, GetDatabase, DeleteDatabase, CreateTable, GetTable, DeleteTable}

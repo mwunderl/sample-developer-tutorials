@@ -1,0 +1,28 @@
+cognito_GettingStarted:
+  title: Get started with Amazon Cognito using the CLI
+  title_abbrev: Cognito getting started
+  synopsis_list:
+    - Create Cognito user pools for user authentication and management
+    - Configure user pool settings including auto-verified attributes
+    - Create app clients for application integration with user pools
+    - Set up custom domains for hosted UI authentication flows
+    - Create admin users with temporary passwords
+    - Demonstrate user self-registration and sign-up processes
+    - Confirm user registrations using admin privileges
+    - Authenticate users and retrieve access tokens
+    - List and manage users within user pools
+    - Clean up user pools, domains, and app clients
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/066-amazon-cognito-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/066-amazon-cognito-gs/amazon-cognito-gs.sh
+  services:
+    cognito-idp: {
+      CreateUserPool, DeleteUserPool, DescribeUserPool, CreateUserPoolClient, DescribeUserPoolClient, CreateUserPoolDomain, DeleteUserPoolDomain, AdminCreateUser, SignUp, AdminConfirmSignUp, InitiateAuth, ListUsers}

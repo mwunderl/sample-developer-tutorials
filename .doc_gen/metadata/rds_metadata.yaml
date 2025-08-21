@@ -1,0 +1,26 @@
+rds_GettingStarted:
+  title: Get started with Amazon RDS using the CLI
+  title_abbrev: RDS getting started
+  synopsis_list:
+    - Create DB subnet groups for multi-AZ database deployment
+    - Configure security groups for database access control
+    - Create RDS database instances with MySQL engine
+    - Set up database credentials using AWS Secrets Manager
+    - Monitor database creation status and wait for availability
+    - Retrieve database connection information and endpoints
+    - Connect to databases using standard database clients
+    - Clean up database instances, subnet groups, and security groups
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/036-rds-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/036-rds-gs/rds-gs.sh
+  services:
+    rds: {
+      CreateDbSubnetGroup, DeleteDbSubnetGroup, CreateDbInstance, DeleteDbInstance, DescribeDbInstances, WaitDbInstanceAvailable, WaitDbInstanceDeleted}

@@ -1,0 +1,25 @@
+chime_sdk_voice_RoutingCalls:
+  title: Set up call routing with Amazon Chime SDK Voice using the CLI
+  title_abbrev: Chime SDK Voice call routing
+  synopsis_list:
+    - Search for available toll-free phone numbers in your region
+    - Create IAM roles and policies for Lambda function execution
+    - Deploy Lambda functions for call handling and routing logic
+    - Create SIP Media Applications for primary and backup call processing
+    - Configure SIP rules to route calls based on phone numbers or hostnames
+    - Demonstrate outbound call creation and call management
+    - Clean up all resources including Lambda functions, SIP applications, and IAM roles
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/007-chimesdk-routingcalls
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/007-chimesdk-routingcalls/chimesdk-routingcalls.sh
+  services:
+    chime-sdk-voice: {
+      SearchAvailablePhoneNumbers, ListPhoneNumbers, CreateSipMediaApplication, ListSipMediaApplications, DeleteSipMediaApplication, CreateSipRule, ListSipRules, DeleteSipRule, CreateSipMediaApplicationCall, UpdateSipMediaApplicationCall}

@@ -1,0 +1,26 @@
+ec2_Basics:
+  title: Get started with Amazon EC2 basics using the CLI
+  title_abbrev: EC2 basics
+  synopsis_list:
+    - Create EC2 key pairs for secure SSH access to instances
+    - Create and configure security groups with ingress rules
+    - Launch EC2 instances with enhanced security settings (IMDSv2, encryption)
+    - Monitor instance states and wait for status changes
+    - Stop and start instances to understand state management
+    - Allocate and associate Elastic IP addresses for persistent public IPs
+    - Test Elastic IP persistence across instance stop/start cycles
+    - Clean up all resources including instances, security groups, and key pairs
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/013-ec2-basics
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/013-ec2-basics/ec2-basics.sh
+  services:
+    ec2: {
+      CreateKeyPair, DeleteKeyPair, CreateSecurityGroup, DeleteSecurityGroup, AuthorizeSecurityGroupIngress, DescribeImages, RunInstances, DescribeInstances, WaitInstanceRunning, WaitInstanceStopped, WaitInstanceTerminated, StopInstances, StartInstances, TerminateInstances, AllocateAddress, AssociateAddress, DisassociateAddress, ReleaseAddress}

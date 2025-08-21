@@ -1,0 +1,26 @@
+athena_GettingStarted:
+  title: Get started with Amazon Athena using the CLI
+  title_abbrev: Athena getting started
+  synopsis_list:
+    - Create Athena databases for organizing query workloads
+    - Create external tables pointing to S3 data sources
+    - Execute SQL queries against S3 data using Athena
+    - Monitor query execution status and retrieve results
+    - Create named queries for reusable SQL statements
+    - List and manage named queries in your account
+    - Download query results from S3 output locations
+    - Clean up databases, tables, and named queries
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/061-amazon-athena-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/061-amazon-athena-gs/amazon-athena-gs.sh
+  services:
+    athena: {
+      StartQueryExecution, GetQueryExecution, GetQueryResults, ListDatabases, ListTableMetadata, CreateNamedQuery, DeleteNamedQuery, ListNamedQueries, GetNamedQuery}

@@ -1,0 +1,78 @@
+cloudwatch_DynamicDashboard:
+  title: Create dynamic CloudWatch dashboards using the CLI
+  title_abbrev: CloudWatch dynamic dashboards
+  synopsis_list:
+    - Create Lambda functions to generate CloudWatch metrics
+    - Design dashboard JSON configurations with multiple widget types
+    - Create CloudWatch dashboards with metric widgets and text widgets
+    - Configure dashboard layouts and visualization options
+    - Verify dashboard creation and retrieve dashboard configurations
+    - List all available dashboards in the account
+    - Update dashboard configurations and widget settings
+    - Clean up dashboards and associated resources
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/031-cloudwatch-dynamicdash
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/031-cloudwatch-dynamicdash/cloudwatch-dynamicdash.sh
+  services:
+    cloudwatch: {
+      PutDashboard, GetDashboard, ListDashboards, DeleteDashboards}
+
+cloudwatch_Streams:
+  title: Create CloudWatch dashboards with property variables using the CLI
+  title_abbrev: CloudWatch dashboard variables
+  synopsis_list:
+    - Create Lambda functions to generate sample metrics for dashboard visualization
+    - Design dashboard configurations with property variables for dynamic filtering
+    - Create CloudWatch dashboards with variable-based metric widgets
+    - Configure dashboard property variables for Lambda function selection
+    - Invoke Lambda functions to generate CloudWatch metrics data
+    - Verify dashboard creation and access through console URLs
+    - Use property variables to filter and display metrics dynamically
+    - Clean up dashboards and Lambda functions
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/032-cloudwatch-streams
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/032-cloudwatch-streams/cloudwatch-streams.sh
+  services:
+    cloudwatch: {
+      PutDashboard, GetDashboard, DeleteDashboards}
+  title: Create dynamic CloudWatch dashboards using the CLI
+  title_abbrev: CloudWatch dynamic dashboards
+  synopsis_list:
+    - Create Lambda functions to generate CloudWatch metrics
+    - Design dashboard JSON configurations with multiple widget types
+    - Create CloudWatch dashboards with metric widgets and text widgets
+    - Configure dashboard layouts and visualization options
+    - Verify dashboard creation and retrieve dashboard configurations
+    - List all available dashboards in the account
+    - Update dashboard configurations and widget settings
+    - Clean up dashboards and associated resources
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/031-cloudwatch-dynamicdash
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/031-cloudwatch-dynamicdash/cloudwatch-dynamicdash.sh
+  services:
+    cloudwatch: {
+      PutDashboard, GetDashboard, ListDashboards, DeleteDashboards}

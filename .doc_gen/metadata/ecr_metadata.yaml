@@ -1,0 +1,26 @@
+ecr_GettingStarted:
+  title: Get started with Amazon ECR using the CLI
+  title_abbrev: ECR getting started
+  synopsis_list:
+    - Create ECR repositories for storing container images
+    - Authenticate Docker client to ECR using login passwords
+    - Build Docker images locally for containerized applications
+    - Tag Docker images with ECR repository URIs
+    - Push Docker images to ECR repositories
+    - Pull images from ECR repositories for deployment
+    - Manage image lifecycle and repository settings
+    - Delete images and repositories for cleanup
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/078-amazon-elastic-container-registry-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/078-amazon-elastic-container-registry-gs/amazon-elastic-container-registry-gs.sh
+  services:
+    ecr: {
+      CreateRepository, DeleteRepository, GetLoginPassword, BatchDeleteImage}

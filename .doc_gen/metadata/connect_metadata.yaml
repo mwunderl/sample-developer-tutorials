@@ -1,0 +1,27 @@
+connect_GettingStarted:
+  title: Get started with Amazon Connect using the CLI
+  title_abbrev: Connect getting started
+  synopsis_list:
+    - Create Amazon Connect instances with identity management configuration
+    - Configure inbound and outbound calling capabilities
+    - List and manage security profiles for user access control
+    - Create routing profiles for call distribution
+    - Create admin users with appropriate permissions and phone configurations
+    - Update instance attributes for enhanced features like early media and multi-party calls
+    - Search for and claim available phone numbers
+    - Configure storage settings for chat transcripts and call recordings
+    - Clean up instances and release phone numbers
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/027-connect-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/027-connect-gs/connect-gs.sh
+  services:
+    connect: {
+      CreateInstance, DeleteInstance, DescribeInstance, ListInstances, ListSecurityProfiles, ListRoutingProfiles, CreateUser, UpdateInstanceAttribute, ListInstanceStorageConfigs, SearchAvailablePhoneNumbers, ClaimPhoneNumber, ReleasePhoneNumber}

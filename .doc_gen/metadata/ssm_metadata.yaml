@@ -1,0 +1,25 @@
+ssm_GettingStarted:
+  title: Get started with AWS Systems Manager using the CLI
+  title_abbrev: Systems Manager getting started
+  synopsis_list:
+    - Create Systems Manager configuration managers for resource management
+    - Configure Quick Setup for automated resource configuration
+    - Define configuration definitions with JSON specifications
+    - Monitor configuration manager creation and status
+    - Verify configuration manager deployment across regions
+    - Manage EC2 instances with Systems Manager capabilities
+    - Clean up configuration managers and associated resources
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/046-aws-systems-manager-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/046-aws-systems-manager-gs/aws-systems-manager-gs.sh
+  services:
+    ssm-quicksetup: {
+      CreateConfigurationManager, GetConfigurationManager, DeleteConfigurationManager}

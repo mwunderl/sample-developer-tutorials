@@ -1,0 +1,26 @@
+opensearch_GettingStarted:
+  title: Get started with Amazon OpenSearch Service using the CLI
+  title_abbrev: OpenSearch Service getting started
+  synopsis_list:
+    - Create an OpenSearch domain with specific engine version and configuration
+    - Configure cluster settings including instance types and storage options
+    - Set up domain access policies for secure access control
+    - Monitor domain creation status and wait for active state
+    - Retrieve domain endpoint for application connectivity
+    - Test domain connectivity and basic operations
+    - Index sample documents and perform search queries
+    - Clean up resources to avoid ongoing charges
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/016-opensearch-service-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/016-opensearch-service-gs/opensearch-service-gs.sh
+  services:
+    opensearch: {
+      CreateDomain, DescribeDomain, DeleteDomain}

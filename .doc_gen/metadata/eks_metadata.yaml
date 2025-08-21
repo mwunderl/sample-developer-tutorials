@@ -1,0 +1,27 @@
+eks_GettingStarted:
+  title: Get started with Amazon EKS using the CLI
+  title_abbrev: EKS getting started
+  synopsis_list:
+    - Create IAM roles for EKS cluster and node group operations
+    - Create EKS clusters with VPC and security group configurations
+    - Wait for cluster creation and monitor cluster status
+    - Configure kubectl to connect to the EKS cluster
+    - Create managed node groups for running Kubernetes workloads
+    - Wait for node group creation and verify node availability
+    - Describe cluster and node group configurations
+    - Deploy sample applications to test cluster functionality
+    - Clean up node groups, clusters, and associated resources
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/034-eks-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/034-eks-gs/eks-gs.sh
+  services:
+    eks: {
+      CreateCluster, DeleteCluster, DescribeCluster, WaitClusterActive, WaitClusterDeleted, UpdateKubeconfig, CreateNodegroup, DeleteNodegroup, DescribeNodegroup, ListNodegroups, WaitNodegroupActive, WaitNodegroupDeleted}

@@ -1,0 +1,26 @@
+stepfunctions_GettingStarted:
+  title: Get started with AWS Step Functions using the CLI
+  title_abbrev: Step Functions getting started
+  synopsis_list:
+    - Create state machines with JSON workflow definitions
+    - Define states including Pass, Task, and Choice states
+    - Start state machine executions with and without input data
+    - Monitor execution status and retrieve execution history
+    - Update state machine definitions to modify workflows
+    - Integrate with AWS services like Lambda and Comprehend
+    - Handle execution results and error conditions
+    - Clean up state machines and associated resources
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/080-aws-step-functions-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/080-aws-step-functions-gs/aws-step-functions-gs.sh
+  services:
+    stepfunctions: {
+      CreateStateMachine, DeleteStateMachine, UpdateStateMachine, StartExecution, DescribeExecution}

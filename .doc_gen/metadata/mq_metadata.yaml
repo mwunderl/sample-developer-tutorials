@@ -1,0 +1,27 @@
+mq_GettingStarted:
+  title: Get started with Amazon MQ using the CLI
+  title_abbrev: Amazon MQ getting started
+  synopsis_list:
+    - Create Amazon MQ brokers with ActiveMQ engine
+    - Configure broker settings including instance types and storage
+    - Set up broker authentication with username and password
+    - Monitor broker creation status and wait for running state
+    - Retrieve broker connection details and endpoints
+    - Access web console URLs for broker management
+    - Configure security groups for broker access
+    - Test message publishing and consumption
+    - Delete brokers and clean up resources
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/043-amazon-mq-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/043-amazon-mq-gs/amazon-mq-gs.sh
+  services:
+    mq: {
+      CreateBroker, DeleteBroker, DescribeBroker}

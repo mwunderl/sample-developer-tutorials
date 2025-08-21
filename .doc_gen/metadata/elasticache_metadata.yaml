@@ -1,0 +1,26 @@
+elasticache_GettingStarted:
+  title: Get started with Amazon ElastiCache using the CLI
+  title_abbrev: ElastiCache getting started
+  synopsis_list:
+    - Create ElastiCache serverless caches with Valkey engine
+    - Monitor cache creation status and wait for availability
+    - Configure security groups for cache access
+    - Retrieve cache endpoints for application connectivity
+    - Test cache connectivity and basic operations
+    - Connect to caches using Redis-compatible clients
+    - Monitor cache performance and status
+    - Delete serverless caches and clean up resources
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/065-amazon-elasticache-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/065-amazon-elasticache-gs/amazon-elasticache-gs.sh
+  services:
+    elasticache: {
+      CreateServerlessCache, DescribeServerlessCaches, DeleteServerlessCache}

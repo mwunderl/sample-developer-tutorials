@@ -1,0 +1,26 @@
+lambda_GettingStarted:
+  title: Get started with AWS Lambda using the CLI
+  title_abbrev: Lambda getting started
+  synopsis_list:
+    - Create IAM roles and policies for Lambda function execution
+    - Package Python code into deployment packages for Lambda
+    - Create Lambda functions with runtime and handler configuration
+    - Wait for function state to become active before invocation
+    - Invoke Lambda functions with test payloads and capture responses
+    - Monitor function execution through CloudWatch logs
+    - Update function code and configuration as needed
+    - Clean up all resources including functions, roles, and log groups
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/019-lambda-gettingstarted
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/019-lambda-gettingstarted/lambda-gettingstarted.sh
+  services:
+    lambda: {
+      CreateFunction, DeleteFunction, GetFunction, Invoke}

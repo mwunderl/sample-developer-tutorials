@@ -1,0 +1,26 @@
+ses_GettingStarted:
+  title: Get started with Amazon SES using the CLI
+  title_abbrev: SES getting started
+  synopsis_list:
+    - Verify email addresses for sending and receiving emails
+    - Check email identity verification status and attributes
+    - Verify domain identities for organization-wide email sending
+    - Set up DKIM authentication for domain-based email security
+    - Check SES sending quotas and rate limits
+    - Send test emails using verified identities
+    - List all verified email and domain identities
+    - Clean up email and domain identities
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/033-ses-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/033-ses-gs/ses-gs.sh
+  services:
+    ses: {
+      VerifyEmailIdentity, DeleteIdentity, ListIdentities, GetIdentityVerificationAttributes, VerifyDomainIdentity, VerifyDomainDkim, GetSendQuota, SendEmail}

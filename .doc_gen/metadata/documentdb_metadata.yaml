@@ -1,0 +1,26 @@
+documentdb_GettingStarted:
+  title: Get started with Amazon DocumentDB using the CLI
+  title_abbrev: DocumentDB getting started
+  synopsis_list:
+    - Create DB subnet groups for DocumentDB cluster deployment
+    - Create DocumentDB clusters with MongoDB-compatible engine
+    - Configure cluster security and access credentials
+    - Create DocumentDB instances within clusters
+    - Monitor cluster and instance creation status
+    - Retrieve connection endpoints and security group information
+    - Connect to DocumentDB using MongoDB clients
+    - Clean up clusters, instances, and subnet groups
+  category: Scenarios
+  languages:
+    Bash:
+      versions:
+        - sdk_version: 2
+          github_name: "Sample developer tutorials"
+          github: https://github.com/aws-samples/sample-developer-tutorials/tree/main/tuts/025-documentdb-gs
+          excerpts:
+            - description:
+              snippet_files:
+                - tuts/025-documentdb-gs/documentdb-gs.sh
+  services:
+    docdb: {
+      CreateDbSubnetGroup, DeleteDbSubnetGroup, DescribeDbSubnetGroups, CreateDbCluster, DeleteDbCluster, DescribeDbClusters, CreateDbInstance, DeleteDbInstance, DescribeDbInstances}
